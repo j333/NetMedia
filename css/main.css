@@ -126,7 +126,7 @@ section{
     overflow: auto;
 }
 section .content{
-    padding: 3em 8em;
+    padding: 2em 8em;
     max-width: 30em;
     height: auto;
 }
@@ -153,12 +153,28 @@ article{
 .vision strong{
     color: #22BD0D;
 }
-.vision .icon{
-    background-image: url("../img/vision.png");
-    height: 58px;
+.icon{
+    height: 90px;
     width: 90px;
     position: absolute;
-    left: 10px;
+    left: -2px;
+    margin-top: 9px;
+}
+.vision .icon{
+    background-image: url("../img/icons.png");
+    background-position: -75px -90px;
+}
+.portfolio .icon{
+    background-image: url("../img/icons.png");
+    background-position: -155px -90px;
+}
+.about .icon{
+    background-image: url("../img/icons.png");
+    background-position: -235px -90px;
+}
+.contact .icon{
+    background-image: url("../img/icons.png");
+    background-position: -315px -90px;
 }
 .portfolio strong{
     color: #FFC800;
@@ -169,7 +185,27 @@ article{
 .contact strong{
     color: #FF1C36;
 }
-
+/* Preloader */
+#preloader {
+    position:absolute;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    background-color:#0071CF; /* change if the mask should have another color then white */
+    z-index:99; /* makes sure it stays on top */
+}
+#status {
+    width:200px;
+    height:200px;
+    position:absolute;
+    left:50%; /* centers the loading animation horizontally one the screen */
+    top:50%; /* centers the loading animation vertically one the screen */
+    background-image:url(../img/status.gif); /* path to your loading animation */
+    background-repeat:no-repeat;
+    background-position:center;
+    margin:-100px 0 0 -100px; /* is width and height divided by two */
+}
 /* ==========================================================================
    Style Menu
    ========================================================================== */
@@ -183,7 +219,7 @@ nav ul{
 }
 nav li{
     height: 90px;
-    margin: 0 5px;
+    margin: 0;
     width: 90px;
     background-repeat: no-repeat;
     background-position: center;
