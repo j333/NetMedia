@@ -1,0 +1,456 @@
+html,
+button,
+input,
+select,
+textarea {
+    color: #B3B3B3;
+    font-family: Muli,AppleGothic,Futura,sans-serif;
+}
+
+body {
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    color: #ffffff;
+    background: #0071cf;
+    text-shadow: none;
+}
+
+::selection {
+    color: #ffffff;
+    background: #0071cf;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+html, body {
+    overflow: hidden;
+    height:100%;
+}
+h1,h2,h3{
+    text-transform: uppercase;
+}
+header{
+}
+header h1{
+    position: fixed;
+    text-indent:-9999px;
+}
+h1{
+    font-size: 75%;
+}
+h2{
+    font-size: 100%;
+}
+strong{
+    font-size: 300%;
+    margin: 0;
+    line-height: 1;
+    font-weight: 300;
+    font-style: italic;
+    text-transform: uppercase;
+}
+.direction{
+    position: fixed;
+    left: 0;
+    top: 50%;
+    margin-left: 10px;
+    margin-top: -72px;
+    height: 144px;
+    text-indent:-9999px;
+}
+.ascensorLinkNext{
+    width: 61px;
+    height: 22px;
+    background-image: url("../img/icons.png");
+    background-position: -49px -187px;
+}
+.button-menu{
+    width: 36px;
+    height: 33px;
+    background-image: url("../img/icons.png");
+    background-position: 0 -182px;
+    margin: 40px auto;
+}
+.ascensorLinkPrev{
+    width: 26px;
+    height: 9px;
+    background-image: url("../img/icons.png");
+    background-position: -125px -185px;
+    margin: 6px auto 0;
+    background-repeat: no-repeat;
+}
+.ascensorLinkActive{
+    background-color: #f1f1f1;
+}
+.container {
+    min-height:100%;
+    background-color: #f5f5f5;
+}
+section{
+    overflow: auto;
+}
+section .content{
+    padding: 3em 8em;
+    max-width: 30em;
+    height: auto;
+}
+article{
+    padding: 20px;
+}
+.portfolio article{
+    margin-left: 10px;
+}
+.home{
+    color: #ffffff;
+    background: #0071cf url("../img/home.jpg") no-repeat scroll;
+    background-size: cover;
+}
+.home .logo{
+    cursor: pointer;
+    width: 312px;
+    height: 229px;
+    top: 50%;
+    margin-top: -120px;
+    position: absolute;
+    background:transparent url("../img/logo-big.png") no-repeat scroll;
+}
+.vision strong{
+    color: #22BD0D;
+}
+.vision .icon{
+    background-image: url("../img/vision.png");
+    height: 58px;
+    width: 90px;
+    position: absolute;
+    left: 10px;
+}
+.portfolio strong{
+    color: #FFC800;
+}
+.about strong{
+    color: #FF6E00;
+}
+.contact strong{
+    color: #FF1C36;
+}
+
+/* ==========================================================================
+   Style Menu
+   ========================================================================== */
+
+nav ul{
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    background-color: #fff;
+    padding-left: 85px;
+}
+nav li{
+    height: 90px;
+    margin: 0 5px;
+    width: 90px;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-indent: -9999px;
+    float: left;
+}
+.cbp-spmenu {
+    position: fixed;
+}
+.cbp-spmenu a {
+    display: block;
+    color: #ccc;
+    font-size: 1.1em;
+    font-weight: 300;
+    cursor: pointer;
+} 
+.cbp-spmenu li a:hover {
+    background-position-y: -90px;
+}
+.cbp-spmenu a:active {
+}
+.ascensorLinkNext:hover{
+    -webkit-transition: all 0.1s ease;
+    -moz-transition: all 0.1s ease;
+    transition: all 0.1s ease;
+    padding-top: 5px;
+    background-position-y: -183px;
+}
+.ascensorLinkPrev:hover{
+    -webkit-transition: all 0 ease;
+    -moz-transition: all 0 ease;
+    transition: all 0 ease;
+    margin-top: 4px;
+    padding-bottom: 2px;
+}
+
+/* Orientation-dependent styles for the content of the menu */
+ 
+.cbp-spmenu-vertical {
+    width: auto;
+    height: 90px;
+    margin-top: -45px;
+    top: 50%;
+    z-index: 1;
+}
+ 
+.cbp-spmenu-vertical ul a {
+    height: 100%;
+}
+ 
+/* Vertical menu that slides from the left */
+
+.cbp-spmenu-left {
+    left: -578px;
+} 
+.cbp-spmenu-left.cbp-spmenu-open {
+    left: 0px;
+    border-right: 5px solid rgba(0, 0, 0, 0.12);
+}
+ 
+.cbp-spmenu-left.cbp-spmenu-hover {
+    left: -571px;
+}
+
+/* Push classes applied to the body */
+ 
+.cbp-spmenu-push {
+    overflow-x: hidden;
+    position: relative;
+    right: 0;
+}
+ 
+.cbp-spmenu-push-toleft {
+    right: 240px;
+}
+.ascensorLink{
+    background-image: url("../img/icons.png");
+}
+.ascensorLink0 {
+    background-position-x: 7px;
+}
+.ascensorLink1 {
+    background-position-x: -75px;
+}
+.ascensorLink2 {
+    background-position-x: -155px;
+}
+.ascensorLink3 {
+    background-position-x: -235px;
+}
+.ascensorLink4 {
+    background-position-x: -315px;
+}
+.buttom-home:hover {
+    background-position-y: -90px;
+}
+
+/* Transitions */
+ 
+.cbp-spmenu,
+.cbp-spmenu-push {
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+}
+ 
+/* Example media queries */
+ 
+@media screen and (max-height: 26.375em){
+ 
+    .cbp-spmenu-vertical {
+        font-size: 90%;
+        width: 190px;
+    }
+ 
+    .cbp-spmenu-left {
+        left: -175px;
+    }
+ 
+    .cbp-spmenu-push-toleft {
+        right: 190px;
+    }
+}
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+
+}
+
+@media print,
+       (-o-min-device-pixel-ratio: 5/4),
+       (-webkit-min-device-pixel-ratio: 1.25),
+       (min-resolution: 120dpi) {
+
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.ir {
+    background-color: transparent;
+    border: 0;
+    overflow: hidden;
+    *text-indent: -9999px;
+}
+
+.ir:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 150%;
+}
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    * {
+        background: transparent !important;
+        color: #000 !important; /* Black prints faster: h5bp.com/s */
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links for images, or javascript/internal links
+     */
+
+    .ir a:after,
+    a[href^="javascript:"]:after,
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group; /* h5bp.com/t */
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    @page {
+        margin: 0.5cm;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}
