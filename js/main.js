@@ -4,19 +4,56 @@ $(window).load(function() { // makes sure the whole site is loaded
 	$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
 })
 
-// SCROLL
-
 // ASCENSOR
 $('#ascensor').ascensor();
 	var menuLeft = document.getElementById( 'cbp-spmenu-s' ),
         body = document.body;
 // MENU
-showMenu.onclick = function() {
-    classie.toggle( menuLeft, 'cbp-spmenu-open' );
-};
 ascensor.onclick = function() {
     classie.remove( menuLeft, 'cbp-spmenu-open' );
 };
+var bandera = false;
+function menuMobile(boleano){
+
+        if(bandera == boleano){
+            $(".cbp-spmenu-left ul").css({ 'margin-top' : '-90px'});
+            $(".cbp-spmenu #showMenu").css({ 'top' : '-110px'});
+            $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '-70px'});
+            bandera = false;
+        }else{
+            $(".cbp-spmenu-left ul").css({ 'margin-top' : '0px'});
+            $(".cbp-spmenu #showMenu").css({ 'top' : '-30px'});
+            $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '10px'});
+            bandera = true;
+         }
+}
+
+var windowsize;
+
+showMenu.onclick = function() {
+    classie.toggle( menuLeft, 'cbp-spmenu-open' );
+    
+    if (windowsize < 700){
+        menuMobile(true);
+    }
+};
+
+$(document).ready(function () {
+    trianguloGoogle();
+    windowsize = $(window).width();
+});
+
+$(window).resize(function() {
+    trianguloGoogle();
+    windowsize = $(window).width();
+    if (windowsize > 700){
+        $(".cbp-spmenu-left ul").css({ 'margin-top' : '0px'});
+    }else{
+        $(".cbp-spmenu-left ul").css({ 'margin-top' : '-90px'});
+        $(".cbp-spmenu #showMenu").css({ 'top' : '-110px'});
+        $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '-70px'});
+    }
+});
 
 //ACCORDION
 $(".vision h2").click(function() {
@@ -65,35 +102,3 @@ function trianguloGoogle(){
         });
     }
 }
-
-
-//MENU MOBILE
-function menuMobile(){
-    if ($(window).width() < 700) {
-
-        var bandera = false;
-
-        $("#showMenu").click(function(){
-            if(bandera == true){
-                $(".cbp-spmenu #showMenu").css({ 'top' : '-110px'});
-                $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '-70px'});
-                $(".cbp-spmenu-left ul").css({ 'margin-top' : '-90px'});          
-                bandera = false;
-            }else{
-                $(".cbp-spmenu #showMenu").css({ 'top' : '-30px'});
-                $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '10px'});
-                $(".cbp-spmenu-left ul").css({ 'margin-top' : '0'});
-                bandera = true;
-            }
-        });
-    }
-}
-$(document).ready(function () {
-    trianguloGoogle();
-    menuMobile();
-});
-
-$(window).resize(function() { 
-    trianguloGoogle();
-    menuMobile();
-});
