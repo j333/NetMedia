@@ -126,9 +126,15 @@ section{
     overflow: auto;
 }
 section .content{
-    padding: 2em 8em;
-    max-width: 30em;
+    padding: 2em 0 2em 8em;
+    width: 30em;
     height: auto;
+    float: left;
+}
+.content.content-second {
+    padding: 4em;
+    background-color: #5C5C5C;
+    margin: 2em;
 }
 article{
     padding: 20px;
@@ -207,7 +213,9 @@ article{
     margin:-100px 0 0 -100px; /* is width and height divided by two */
 }
 .profile {
-    margin: 1em 0;
+    margin: 0;
+    width: 240px;
+    float: left;
 }
 .vision p{
     display: none;
