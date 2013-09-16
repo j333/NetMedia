@@ -102,3 +102,8 @@ function trianguloGoogle(){
         });
     }
 }
+
+//SLIDER PORTFOLIO
+$(function() {
+    Slider.init();
+});

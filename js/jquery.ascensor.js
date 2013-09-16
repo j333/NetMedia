@@ -58,7 +58,7 @@ author: Léo Galley <contact@kirkas.ch>
         /* Resize function */
         function resize() {
             //update WW & WH variables
-            WW = $(document).width(), WH = $(document).height(), //node and node children get have window widht & height
+            WW = $(window).width(), WH = $(window).height(), //node and node children get have window widht & height
             $(nodeChildren).width(WW).height(WH), $(node).width(WW).height(WH), //if direction is y
             "y" === self.options.direction && //stop animation and update node scrollTop
             $(node).stop().scrollTop(floorActive * WH), //if direction is x
