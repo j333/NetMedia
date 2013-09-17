@@ -8,6 +8,7 @@ $(window).load(function() { // makes sure the whole site is loaded
 $('#ascensor').ascensor();
 	var menuLeft = document.getElementById( 'cbp-spmenu-s' ),
         body = document.body;
+
 // MENU
 ascensor.onclick = function() {
     classie.remove( menuLeft, 'cbp-spmenu-open' );

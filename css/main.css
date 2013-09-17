@@ -150,11 +150,9 @@ article{
 }
 .home .logo{
     cursor: pointer;
-    width: 312px;
-    height: 229px;
-    top: 50%;
-    margin-top: -150px;
-    position: absolute;
+    width: 150px;
+    height: 38px;
+    margin: 20px 0;
     background:transparent url("../img/logo-big.png") no-repeat scroll;
 }
 .vision strong{
@@ -183,6 +181,11 @@ article{
     background-image: url("../img/icons.png");
     background-position: -315px -90px;
 }
+.home strong{
+    font-size: 4em;
+    margin-top: 30px;
+    display: block;
+}
 .portfolio strong{
     color: #FFC800;
 }
@@ -191,6 +194,15 @@ article{
 }
 .contact strong{
     color: #FF1C36;
+}
+.keyboard{
+    position: absolute;
+    background-image: url("../img/keyboard.png");
+    width: 78px;
+    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    cursor: pointer;
 }
 /* Preloader */
 #preloader {
