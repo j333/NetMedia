@@ -427,174 +427,93 @@ nav li{
 }
 
 /* Transitions */
- 
+.trabajo1,
+.trabajo2,
+.trabajo3,
+.trabajo4,
+.trabajo5,
+.trabajo6,
+.trabajo7,
+.trabajo8,
+.trabajo9,
+.trabajo10,
+.trabajo11,
+.trabajo12{
+    display:none;
+}
 .cbp-spmenu,
 .cbp-spmenu-push {
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     transition: all 0.3s ease;
 }
-
-/*Slider Portfolio*/
-.portfolio .content{
-    width:40%;
-    padding-right:0;
-}
-.ps-container {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-}
-.ps-container .ps-contentwrapper,
-.ps-container .ps-slidewrapper {
-    position: absolute;
-    width: 50%;
-}
-.content > div > div,
-.ps-slidewrapper > nav,
-.ps-slides > div {
-    position: absolute;
-}
-.ps-contentwrapper {
-    bottom: 0px;
-    overflow: hidden;
-    height:40%;
-    bottom:0;
-}
-.ps-content {
-    width: 50%;
-    height: 100%;
+/*portfolio*/
+.portfolio{
     position:relative;
 }
-.ps-content span.ps-price {
-    float: left;
-    margin: 10px;
-    width: 140px;
-    height: 140px;
-    line-height: 140px;
-    text-align: center;
-    color: #fff;
-    background: #f7cfc6;
-    background: rgba(247,197,185,0.8);
-    font-size: 55px;
-    font-weight: 200;
+#grid_porfolio{
+    width:50%;
+    min-height:100%;
+    position:absolute;
+    right:0;
+    top:0;
+    margin:0;
+    padding:0;
 }
-.ps-content a:last-child {
-    font-size: 14px;
-    font-weight: 700;
-    color: #555;
-    letter-spacing: 4px;
-    float: right;
-    border: 3px solid #555;
-    padding: 3px;
-    text-indent: 4px;
+.left_grid{
+    position:relative;
+    display:block;
+    width:33.3333%;
+    max-height:33.3333%;
+    float:left;
+    margin:0;
+    padding:16.3% 0;
+    background-size:100%;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
 }
-.no-touch .ps-content a:last-child:hover {
-    color: #b2d79d;
-    border-color: #b2d79d;
+.left_gridx2{
+    width:66.666%;
 }
-.ps-content a:last-child:before {
-    content: '\53';
-    font-family: 'icon';
-    font-style: normal;
-    font-weight: normal;
-    speak: none;
-    padding-right: 5px;
+.set2{
+    display:none;
 }
-.ps-slidewrapper {
-    right: 0px;
-    top: 0px;
-    height: 100%;
-    overflow: hidden;
+.control_portfolio{
+    background-image:url('../img/flecha_portfolio.png');
+    background-position:100% center;
+    background-repeat:no-repeat;
+    background-size:200% 100%;
+    transition:background-color .3s, background-position .3s;
 }
-.ps-slides {
-    top: 0px;
-    bottom: 200px;
-    width: 100%;
+.control_portfolio:hover{
+    background-position:0 center;
+    background-color:#FFC800
 }
-.ps-slides > div {
-    width: 100%;
-    height: 100%;
-    box-shadow: inset 0 0 0 9999px rgba(179,157,250,0.1);
+#ant_portfolio{
+    transform: rotate(180deg);
 }
-.ps-slidewrapper > nav {
-    width: 100%;
-    height: 200px;
-    bottom: 0px;
-    right: 0px;
-    z-index: 1000;
+/*animacion hover imagenes*/
+.left_grid span{
+    text-transform:uppercase;
+    color:#fff;
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.5);
+    padding:15px;
+    opacity:0;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    transition:opacity .5s ease-in;
 }
-.ps-slidewrapper > nav > a {
-    width: 50%;
-    height: 100%;
-    position: relative;
-    float: left;
-    box-shadow: inset 0 0 0 9999px rgba(197, 197, 197, 0.8);
-    outline: none;
+.left_grid:hover{
+    cursor:pointer;
 }
-.ps-slidewrapper > nav > a:first-child {
-    box-shadow: inset 0 0 0 9999px rgba(255, 235, 139, 0.8);
+.left_grid:hover span{
+    opacity:1;
 }
-.no-touch .ps-slidewrapper > nav > a {
-    -webkit-transition: box-shadow 0.4s ease-in-out;
-    -moz-transition: box-shadow 0.4s ease-in-out;
-    -ms-transition: box-shadow 0.4s ease-in-out;
-    -o-transition: box-shadow 0.4s ease-in-out;
-    transition: box-shadow 0.4s ease-in-out;
-    background-size: cover;
-}
-.no-touch .ps-slidewrapper > nav > a:hover {
-    box-shadow: inset 0 0 0 9999px rgba(246,224,121,0.1);
-}
-.no-touch .ps-slidewrapper > nav > a:first-child:hover {
-    box-shadow: inset 0 0 0 9999px rgba(249,15,15,0.1);
-}
-.ps-slidewrapper > nav > a:after {
-    content: '';
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    top: 50%;
-    left: 50%;
-    margin: -20px 0 0 -50px;
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
-    border-left: 1px solid #fff;
-    border-top: 1px solid #fff;
-}
-.ps-slidewrapper > nav > a:first-child:after {
-    -webkit-transform: rotate(-135deg);
-    -moz-transform: rotate(-135deg);
-    -o-transform: rotate(-135deg);
-    -ms-transform: rotate(-135deg);
-    transform: rotate(-135deg);
-    margin: -80px 0 0 -50px;
-}
-.ps-slides > div,
-.ps-slidewrapper > nav > a {
-    background-color: #fff;
-    background-position: center top;
-    background-repeat: no-repeat;
-    -webkit-background-size: auto 100%;
-    -moz-background-size: auto 100%;
-    background-size: auto 100%;
-}
-.ps-slides div{
-    min-height:200px;
-    background-size: cover;
-}
-.ps-move {
-    -webkit-transition: top 400ms ease-out;
-    -moz-transition: top 400ms ease-out;
-    -o-transition: top 400ms ease-out;
-    -ms-transition: top 400ms ease-out;
-    transition: top 400ms ease-out;
-}
- 
 /* ==========================================================================
    Media Queries
    ========================================================================== */
@@ -614,19 +533,6 @@ nav li{
         right: 190px;
     }
 }
-@media screen and (max-height: 600px){
-    .ps-container .ps-slidewrapper nav{
-        height:50px;
-    }
-    .ps-container .ps-slidewrapper{
-        height:250px;
-    }
-}
-@media screen and (min-height: 600px){
-    .ps-container .ps-slidewrapper{
-        height:400px;
-    }
-}
 @media only screen and (max-width: 1000px) {
     strong{
         font-size:200%;
@@ -636,25 +542,6 @@ nav li{
     }
     #triangulo{
         border-width: 1000px 1000px 0 0;
-    }
-}
-@media screen and (min-width: 860px) {
-    .ps-container .ps-slidewrapper{
-        height:100%;
-    }
-}
-@media screen and (max-width: 860px) {
-    .ps-container .ps-slidewrapper{
-        width:100%;
-        position:0;
-        bottom:0;
-        top:auto;
-    }
-    .js .ps-slides{
-        top:0;
-    }
-    .portfolio p, .ps-content h2{
-        display: none;
     }
 }
 @media only screen and (max-width: 700px) {

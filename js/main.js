@@ -66,6 +66,25 @@ $(".vision h2").click(function() {
         	$(this).next("p").slideToggle("fast");
     }
 });
+// PORTFOLIO
+$("#sig_portfolio,#ant_portfolio").click(function(){
+    $(".set1,.set2").fadeToggle("fast");
+});
+
+var cant_pics = new Array();
+for(var i=1; i<=$(".left_grid span").length; i++){
+    cant_pics.push(i);
+}
+//alert(cant_pics);
+jQuery.each( cant_pics, function() {
+    var valor = this;
+    $(".trabajo_pic"+valor).hover( function(){
+        $(".trabajo"+valor).css("display","block");
+    });
+    $(".trabajo_pic"+valor).mouseout( function(){
+        $(".trabajo"+valor).css("display","none");
+    });
+});
 
 //GOOGLE MAPS
 var map;
@@ -104,7 +123,3 @@ function trianguloGoogle(){
     }
 }
 
-//SLIDER PORTFOLIO
-$(function() {
-    Slider.init();
-});
