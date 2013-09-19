@@ -78,12 +78,16 @@ for(var i=1; i<=$(".left_grid span").length; i++){
 //alert(cant_pics);
 jQuery.each( cant_pics, function() {
     var valor = this;
-    $(".trabajo_pic"+valor).hover( function(){
+    $(".trabajo_pic"+valor+" span").hover( function(){
         $(".trabajo"+valor).css("display","block");
     });
-    $(".trabajo_pic"+valor).mouseout( function(){
+    $(".trabajo_pic"+valor+" span").mouseout( function(){
         $(".trabajo"+valor).css("display","none");
     });
+});
+
+$(document).ready(function() {
+    $(".fancybox").fancybox();
 });
 
 //GOOGLE MAPS

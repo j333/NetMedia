@@ -464,16 +464,25 @@ nav li{
     position:relative;
     display:block;
     width:33.3333%;
-    max-height:33.3333%;
+    height:33.3333%;
     float:left;
     margin:0;
     padding:16.3% 0;
-    background-size:100%;
+    background-size:auto 100%;
+    background-position:center;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
 .left_gridx2{
     width:66.666%;
+}
+.set1,.set2{
+    height:100%;
+    position:absolute;
+    top:0;
+    right:0;
+    width:100%;
+    max-width:100%;
 }
 .set2{
     display:none;
@@ -495,24 +504,25 @@ nav li{
 /*animacion hover imagenes*/
 .left_grid span{
     text-transform:uppercase;
-    color:#fff;
+    color:rgba(255,255,255,0);
     position:absolute;
-    width:100%;
+    width:0;
     height:100%;
     top:0;
     left:0;
-    background:rgba(0,0,0,.5);
     padding:15px;
-    opacity:0;
     -moz-box-sizing:border-box;
     box-sizing:border-box;
-    transition:opacity .5s ease-in;
+    background-color:rgba(0,0,0,0);
+    transition:background-color .3s,color .8s, width .3s ease-out;
 }
 .left_grid:hover{
     cursor:pointer;
 }
 .left_grid:hover span{
-    opacity:1;
+    width:100%;
+    background-color:rgba(0,0,0,.5);
+    color:rgba(255,255,255,1);
 }
 /* ==========================================================================
    Media Queries
