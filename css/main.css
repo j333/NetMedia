@@ -62,6 +62,7 @@ textarea {
 html, body {
     /*overflow: hidden;*/
     height:100%;
+    overflow:hidden;
 }
 h1,h2,h3{
     text-transform: uppercase;
@@ -134,7 +135,7 @@ section .content{
 .content.content-second {
     padding: 4em;
     background-color: #5C5C5C;
-    margin: 0 2em;
+    margin: 0 0 0 2em;
     min-height: 100%;
 }
 article{
@@ -224,6 +225,7 @@ article{
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */
+
 }
 .profile {
     margin: 0;
