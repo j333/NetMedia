@@ -131,19 +131,21 @@ section .content{
     width: 30em;
     height: auto;
     float: left;
+    overflow: hidden;
 }
 .content.content-second {
-    padding: 0 4em;
-    color: #fff;
+    padding: 2em 4em;
+    color: white;
     margin: 0 0 0 2em;
     min-height: 100%;
     position: absolute;
-    right: 0;
-    margin-top: -133px;
-    border-top: 1px solid #fff;
+    left: 650px;
+    margin-top: -134px;
+    border-top: 1px solid white;
 }
 .profile + .content.content-second {
     background-color: #FF6E00;
+    border-right: 2000px solid #FF6E00;
     display: none;
 }
 }
