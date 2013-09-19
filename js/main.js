@@ -91,7 +91,19 @@ jQuery.each( cant_pics, function() {
 $(document).ready(function() {
     $(".fancybox").fancybox();
 });
-
+// VISION
+$(".profile").click(function() {
+    if( $(this).next(".content-second").is(":visible")){
+        $(this).next(".content-second").slideUp("fast");
+        $(".profile").removeClass("profile-active");
+        }
+        else {
+            $(".about .content-second").slideUp("fast");
+            $(this).next(".content-second").slideToggle("slow");
+            $(".profile").removeClass("profile-active");
+            $( this ).toggleClass("profile-active");
+    }
+});
 //GOOGLE MAPS
 var map;
 var myOptions = {
@@ -128,4 +140,3 @@ function trianguloGoogle(){
         });
     }
 }
-

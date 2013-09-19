@@ -62,7 +62,7 @@ textarea {
 html, body {
     /*overflow: hidden;*/
     height:100%;
-    overflow:hidden;
+    overflow-y:hidden;
 }
 h1,h2,h3{
     text-transform: uppercase;
@@ -133,10 +133,23 @@ section .content{
     float: left;
 }
 .content.content-second {
-    padding: 4em;
-    background-color: #5C5C5C;
+    padding: 0 4em;
+    color: #fff;
     margin: 0 0 0 2em;
     min-height: 100%;
+    position: absolute;
+    right: 0;
+    margin-top: -133px;
+    border-top: 1px solid #fff;
+}
+.profile + .content.content-second {
+    background-color: #FF6E00;
+    display: none;
+}
+}
+
+.content-second h2 {
+    margin-top: 35px;
 }
 article{
     padding: 20px;
@@ -193,6 +206,9 @@ article{
 .about strong{
     color: #FF6E00;
 }
+.about .content-second strong {
+    color: #fff;
+}
 .contact strong{
     color: #FF1C36;
 }
@@ -227,19 +243,53 @@ article{
     margin:-100px 0 0 -100px; /* is width and height divided by two */
 
 }
+.equipe{
+    margin-top: 20px;
+}
 .profile {
     margin: 0;
-    width: 240px;
     float: left;
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
     filter: grayscale(100%);
+    cursor: pointer;
+    display: block;
+    overflow: hidden;
+    -webkit-transition: border-color 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: border-color 0.5s ease-out;  /* Firefox 4-15 */
+    -o-transition: border-color 0.5s ease-out;  /* Opera 10.50–12.00 */
+    transition: border-color 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 
 }
-.profile.active {
+.profile:hover {
+    width: 230px;
+    height: 230px;
+    border: 5px solid #fff;
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     filter: grayscale(0%);
+
+}
+.profile-active {
+    width: 230px;
+    height: 230px;
+    border: 5px solid #FF6E00;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
+.profile-active:hover {
+    cursor: default;
+    border: 5px solid #FF6E00;
+}
+.profile img{
+    display: block;
+}
+.profile:hover img{
+    margin: -5px 0 0 -5px;
+}
+.profile-active img{
+    margin: -5px 0 0 -5px;
 }
 .vision p{
     display: none;
