@@ -140,14 +140,18 @@ section .content{
     min-height: 100%;
     position: absolute;
     left: 650px;
-    margin-top: -134px;
     border-top: 1px solid white;
 }
-.profile + .content.content-second {
+.content.content-second.content-second-about {
     background-color: #FF6E00;
     border-right: 2000px solid #FF6E00;
-    display: none;
+	margin-top: -133px;
+	display: none;
 }
+.content.content-second.content-second-vision {
+	margin-top: 0;
+	background-color: #22BD0D;
+	margin-top: -455px !important;
 }
 
 .content-second h2 {
