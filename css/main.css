@@ -126,58 +126,30 @@ strong{
 section{
     overflow: auto;
 }
-section .content{
-    padding: 2em 0 2em 8em;
-    width: 30em;
-    height: auto;
+.content{
+    position: relative;
     float: left;
-    overflow: hidden;
-}
-.content.content-second {
-    padding: 2em 4em;
-    color: white;
-    margin: 0 0 0 2em;
     min-height: 100%;
-    position: absolute;
-    left: 650px;
-    border-top: 1px solid white;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
-.content.content-second.content-second-about {
-    background-color: #FF6E00;
-    border-right: 2000px solid #FF6E00;
-	margin-top: -133px;
-	display: none;
+.column1 {
+    width: 40em;
+    padding-left: 5em;
 }
-.content.content-second.content-second-vision {
-	margin-top: 0;
-	background-color: #22BD0D;
-	margin-top: -455px !important;
+.column2{
+    color: #fff;
+    width: -webkit-calc(100% - 40em);
+    width: -moz-calc(100% - 40em);
+    width: calc(100% - 40em);
 }
-
-.content-second h2 {
-    margin-top: 35px;
+.text{
+    max-width: 31em;
+    padding: 2em;
+    float: left;
 }
-article{
-    padding: 20px;
-}
-.portfolio article{
-    margin-left: 10px;
-}
-.home{
-    color: #ffffff;
-    background: #0071cf url("../img/home.jpg") no-repeat scroll;
-    background-size: cover;
-}
-.home .logo{
-    cursor: pointer;
-    width: 150px;
-    height: 38px;
-    margin: 20px 0;
-    background:transparent url("../img/logo-big.png") no-repeat scroll;
-}
-.vision strong{
-    color: #22BD0D;
-}
+/* ICONOS DE CADA SECCIÓN (NO MENU) */
 .icon{
     height: 90px;
     width: 90px;
@@ -201,31 +173,60 @@ article{
     background-image: url("../img/icons.png");
     background-position: -315px -90px;
 }
+article{
+    padding: 20px;
+}
+
+.portfolio article{
+    margin-left: 10px;
+}
+/* PARTICULARIDADES DE CADA SECCIÓN */
+.home{
+    color: #ffffff;
+    background: #0071cf url("../img/home.jpg") no-repeat scroll;
+    background-size: cover;
+}
+.home .column1 {
+    background-color: transparent;
+}
 .home strong{
     font-size: 4em;
     margin-top: 30px;
     display: block;
 }
+.home .logo{
+    cursor: pointer;
+    width: 150px;
+    height: 38px;
+    margin: 20px 0;
+    background:transparent url("../img/logo-big.png") no-repeat scroll;
+}
+.vision .column2{
+    background-color: #22BD0D;
+}
+.vision strong{
+    color: #22BD0D;
+}
+.portfolio .column2{
+    background-color: #FFC800;
+}
 .portfolio strong{
     color: #FFC800;
+}
+.about .column2{
+    background-color: #FF6E00;
 }
 .about strong{
     color: #FF6E00;
 }
-.about .content-second strong {
+.about .column2 strong {
     color: #fff;
+}
+.contact {
+    background-color: #FF1C36;
 }
 .contact strong{
     color: #FF1C36;
-}
-.keyboard{
-    position: absolute;
-    background-image: url("../img/keyboard.png");
-    width: 78px;
-    height: 50px;
-    bottom: 30px;
-    right: 30px;
-    cursor: pointer;
 }
 /* Preloader */
 #preloader {
@@ -251,6 +252,7 @@ article{
 }
 .equipe{
     margin-top: 20px;
+	float:left;
 }
 .profile {
     margin: 0;
@@ -508,17 +510,13 @@ nav li{
 /*portfolio*/
 .portfolio{
     position:relative;
+    overflow: inherit;
 }
 .portfolio div h2{
     font-style:italic;
     margin-top:30px;
 }
 #grid_porfolio{
-    width:50%;
-    min-height:100%;
-    position:absolute;
-    right:0;
-    top:0;
     margin:0;
     padding:0;
 }
@@ -629,8 +627,21 @@ nav li{
         border-width: 1000px 1000px 0 0;
     }
 }
-@media only screen and (max-width: 700px) {
-    .direction{
+@media screen and (max-width : 75em){
+  	.content{
+		height: auto;
+		min-height: 0;
+		width: 100%;
+	}
+	.column2{
+		padding-left: 5em;
+	}
+}
+@media only screen and (max-width: 40em) {
+    .column1{
+		padding-left: 0;
+	}
+	.direction{
         top:90px;
         bottom:0;
         margin:0;
@@ -683,9 +694,6 @@ nav li{
         transition: top .5s;
         -webkit-transition: top .5s;
     }
-    section .content{
-        padding-left:80px;
-    }
     .content strong{
         font-size:150%;
     }
@@ -698,14 +706,15 @@ nav li{
     .cbp-spmenu-left.cbp-spmenu-open {
     border-right: 0;
     }
-}
-@media only screen and (max-width: 480px) {
-    section .content .icon{
+    .content .icon{
         display:none;
     }
-    section .content{
-        padding:80px 8% 30px 15px;
+    .content{
+        padding: 0;
     }
+	.text {
+		padding-top:4em;
+	}
     .home .logo{
         background-size:80%;
     }
