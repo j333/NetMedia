@@ -1,15 +1,25 @@
-# humanstxt.org/
+﻿# humanstxt.org/
 # The humans responsible & technology colophon
 
 # TEAM
 
-    <name> -- <role> -- <twitter>
+    Lead Designer and Front-end Developer: Joel Gutiérrez
+	Site: gutierrezjoel.com.ar
+	Twitter: @Gutz333
+	Location: Mendoza, Argentina
+
+	Front-end Developer: Adriel Zarate
+	Site: adrielzarate.com
+	Twitter: @adriel_zarate
+	Location: Mendoza, Argentina
 
 # THANKS
 
-    <name>
+    Ivan Ramos
+	
+	Everyone at the Open Source Community
 
 # TECHNOLOGY COLOPHON
 
     HTML5, CSS3
-    jQuery, Modernizr
+    Initializr, Normalize.css, jQuery, Modernizr, Google Web Fonts, Sublime Text 2, Filezilla

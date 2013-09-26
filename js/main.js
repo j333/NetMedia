@@ -92,18 +92,47 @@ $(document).ready(function() {
     $(".fancybox").fancybox();
 });
 // VISION
-$(".profile").click(function() {
-    if( $(this).next(".content-second").is(":visible")){
-        $(this).next(".content-second").slideUp("fast");
+/*$(".profile").click(function() {
+    if( $(this).next(".column2").is(":visible")){
+        $(this).next(".column2").slideUp("fast");
         $(".profile").removeClass("profile-active");
         }
         else {
-            $(".about .content-second").slideUp("fast");
-            $(this).next(".content-second").slideToggle("slow");
+            $(".about .column2").slideUp("fast");
+            $(this).next(".column2").slideToggle("slow");
             $(".profile").removeClass("profile-active");
             $( this ).toggleClass("profile-active");
     }
+});*/
+$(".profile").click(function() {
+    if( $(this).next(".column2").is(":visible")){
+        $(".profile").removeClass("profile-active");
+        }
+        else {
+            $(".profile").removeClass("profile-active");
+            $( this ).toggleClass("profile-active");
+            }
 });
+$(".profile-info-close").click(function() {
+    $(".about .column2").hide("slow");
+    $(".profile").removeClass("profile-active");
+});
+$("#ivan").click(function() {
+    $("#ivan-info").show("slow");
+    $("#ally-info").hide(0);
+    $("#asier-info").hide(0);
+});
+$("#ally").click(function() {
+    $("#ally-info").show("slow");
+    $("#ivan-info").hide(0);
+    $("#asier-info").hide(0);
+});
+$("#asier").click(function() {
+    $("#asier-info").show("slow");
+    $("#ivan-info").hide(0);
+    $("#ally-info").hide(0);
+});
+
 //GOOGLE MAPS
 var map;
 var myOptions = {

@@ -133,6 +133,7 @@ section{
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+	-webkit-overflow-scrolling: touch;
 }
 .column1 {
     width: 40em;
@@ -203,6 +204,7 @@ article{
 }
 .vision .column2{
     background-color: #22BD0D;
+    display: none;
 }
 .vision strong{
     color: #22BD0D;
@@ -215,6 +217,7 @@ article{
 }
 .about .column2{
     background-color: #FF6E00;
+    display: none;
 }
 .about strong{
     color: #FF6E00;
@@ -249,6 +252,23 @@ article{
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */
 
+}
+/* Vision */
+.vision{
+    background:transparent url("../img/vision.png") no-repeat scroll;
+    background-position: right bottom;
+}
+.vision p{
+    display: none;
+}
+.vision h2{
+    cursor: pointer;
+}
+/* About us */
+.about{
+    background:transparent url("../img/about.png") no-repeat scroll;
+    background-position: right bottom;
+	background-size:contain
 }
 .equipe{
     margin-top: 20px;
@@ -299,11 +319,14 @@ article{
 .profile-active img{
     margin: -5px 0 0 -5px;
 }
-.vision p{
-    display: none;
-}
-.vision h2{
+.profile-info-close{
+    background-color: #000;
+    height: 50px;
+    width: 50px;
     cursor: pointer;
+    position: absolute;
+    top:10px;
+    right: 10px;
 }
 /* Contact Adriel */
 .contact{
@@ -649,6 +672,7 @@ nav li{
         left:0;
         width:100%;
         margin:0;
+		height:0;
     }
     nav ul{
         padding:0;
