@@ -60,7 +60,7 @@ textarea {
    Author's custom styles
    ========================================================================== */
 html, body {
-    /*overflow: hidden;*/
+    overflow: hidden;
     height:100%;
     overflow-y:hidden;
 }
@@ -628,7 +628,6 @@ nav li{
  
     .cbp-spmenu-vertical {
         font-size: 90%;
-        width: 190px;
     }
  
     .cbp-spmenu-left {
@@ -681,7 +680,7 @@ nav li{
         width:20%;
     }
     .cbp-spmenu li a{
-        width:90px;
+        width:100%;
         margin:0 auto;
     }
     .cbp-spmenu{
@@ -713,10 +712,34 @@ nav li{
         position: fixed;
     }
     .cbp-spmenu .ascensorLinkPrev{
-        margin-left:-11px;
+        margin-left:-21px;
         top:-70px;   
         transition: top .5s;
         -webkit-transition: top .5s;
+    }
+    .ascensorLink {
+        width: 100%;
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+    }
+    .ascensorLink0{
+        background-image: url("../img/icon-home.png");
+    }
+    .ascensorLink1{
+        background-image: url("../img/icon-vision.png");
+    }
+    .ascensorLink2{
+        background-image: url("../img/icon-portfolio.png");
+    }
+    .ascensorLink3{
+        background-image: url("../img/icon-about.png");
+    }
+    .ascensorLink4{
+        background-image: url("../img/icon-contact.png");
+    }
+    .ascensorLink:hover {
+        background-position: center center;
     }
     .content strong{
         font-size:150%;
