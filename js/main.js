@@ -121,26 +121,53 @@ $("#ivan").click(function() {
     $("#ivan-info").show("slow");
     $("#ally-info").hide(0);
     $("#asier-info").hide(0);
+    $('.about').animate({scrollTop:$("#ivan-info").offset().top}, 750);
+     return false;
 });
 $("#ally").click(function() {
     $("#ally-info").show("slow");
     $("#ivan-info").hide(0);
     $("#asier-info").hide(0);
+    $('.about').animate({scrollTop:$("#ally-info").offset().top}, 750);
+     return false;
 });
 $("#asier").click(function() {
     $("#asier-info").show("slow");
     $("#ivan-info").hide(0);
     $("#ally-info").hide(0);
+    $('.about').animate({scrollTop:$("#asier-info").offset().top}, 750);
+     return false;
 });
 
 //GOOGLE MAPS
-var map;
+/*var map;
 var myOptions = {
     zoom: 15,
     center: new google.maps.LatLng(25.254322,55.259686),
     mapTypeId: 'roadmap'
 };
-map = new google.maps.Map($('#map')[0], myOptions)
+map = new google.maps.Map($('#map')[0], myOptions)*/
+function initialize() {
+  var myLatlng = new google.maps.LatLng(25.077009,55.131147);
+  var mapOptions = {
+    zoom: 15,
+    center: myLatlng,
+    mapTypeId: google.maps.MapTypeId.ROADMAP
+  }
+  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+
+  var iconBase = 'http://adrielzarate.com.ar/netmedia/';
+  var newMyLatlng = new google.maps.LatLng(25.068826,55.14748);
+  var marker = new google.maps.Marker({
+      position:newMyLatlng,
+      map: map,
+      title: 'NetMedia Factory',
+      icon: iconBase + 'icon-home.png'
+  });
+}
+
+google.maps.event.addDomListener(window, 'load', initialize);
+
 
 //TRIANGULO GOOGLE MAPS
 function trianguloGoogle(){
