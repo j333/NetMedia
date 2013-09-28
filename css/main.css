@@ -255,7 +255,8 @@ article{
 }
 /* Vision */
 .vision{
-    background:transparent url("../img/vision.png") no-repeat scroll;
+    background:transparent no-repeat scroll;
+    background-image:url("../img/vision.png");
     background-position: right bottom;
 }
 .vision p{
@@ -647,6 +648,9 @@ nav li{
     #triangulo{
         border-width: 1000px 1000px 0 0;
     }
+    .vision{
+        background-position: 150% -150%;
+    }
 }
 @media screen and (max-width : 75em){
   	.content{
@@ -770,6 +774,9 @@ nav li{
     }
     .ps-slides div{
         max-height:200px;
+    }
+    .vision{
+        background-image:none;
     }
 }
 
