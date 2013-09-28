@@ -268,7 +268,6 @@ article{
 .about{
     background:transparent url("../img/about.png") no-repeat scroll;
     background-position: right bottom;
-	background-size:contain
 }
 .equipe{
     margin-top: 20px;
@@ -760,7 +759,7 @@ nav li{
         padding: 0;
     }
 	.text {
-		padding-top:4em;
+		padding:4em 2em;
 	}
     .home .logo{
         background-size:80%;
