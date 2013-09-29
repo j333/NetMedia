@@ -68,12 +68,18 @@ for(var i=1; i<=$(".left_grid span").length; i++){
 //alert(cant_pics);
 jQuery.each( cant_pics, function() {
     var valor = this;
+
     $(".trabajo_pic"+valor+" span").hover( function(){
-        $(".trabajo"+valor).css("display","block");
+        if (windowsize > 1200){
+            $(".trabajo"+valor).css("display","block");
+        }
     });
     $(".trabajo_pic"+valor+" span").mouseout( function(){
-        $(".trabajo"+valor).css("display","none");
+        if (windowsize > 1200){
+            $(".trabajo"+valor).css("display","none");
+        }
     });
+
 });
 
 $(document).ready(function() {
@@ -107,8 +113,7 @@ $(".profile-info-close").click(function() {
     return false;
 });
 
-var altoScroll = $('.equipe').height() + 500;
-alert(altoScroll);
+var altoScroll = $('.equipe').height() + 1000;
 
 $("#ivan").click(function() {
     $("#ivan-info").show("slow");
@@ -142,7 +147,7 @@ function initialize() {
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
-  var iconBase = 'http://adrielzarate.com.ar/netmedia/';
+  var iconBase = 'http://hotelcalafquen.com/img/';
   var marker = new google.maps.Marker({
       position:myLatlng,
       map: map,
