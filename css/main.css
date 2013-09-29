@@ -260,17 +260,17 @@ article{
 .icon-vision {
     height: 218px;
     width: 265px;
-    margin: 0 0 2em -90px;
+    margin: 0 0 2em -85px;
     float: left;
 }
 .icon-vision.friendly {
-    background: url('../img/vision-icons.png') no-repeat;
+    background: url('../img/vision-icons.png') no-repeat center 0;
 }
 .icon-vision.personal {
-    background: url('../img/vision-icons.png') no-repeat 0 -218px;
+    background: url('../img/vision-icons.png') no-repeat center -218px;
 }
 .icon-vision.measurable {
-    background: url('../img/vision-icons.png') no-repeat 0 -436px;
+    background: url('../img/vision-icons.png') no-repeat center -436px;
 }
 /* About us */
 .about{
@@ -786,6 +786,14 @@ nav li{
     }
     .vision{
         background-image:none;
+    }
+    .icon-vision {
+        max-width: 265px;
+        margin: 2em auto 0 auto;
+        float: none;
+    }
+    .icon-vision.personal {
+        margin: 0 auto;
     }
 }
 
