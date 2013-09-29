@@ -628,9 +628,6 @@ nav li{
     strong{
         font-size:200%;
     }
-    /*.portfolio .content{
-        width:30%;
-    }*/
     .vision{
         background-position: 150% -150%;
     }
@@ -653,6 +650,9 @@ nav li{
     }
     .portfolio{
         overflow:auto;
+    }
+    .icon-vision {
+        margin-left:-40px;
     }
 }
 @media only screen and (max-width: 40em) {
