@@ -140,26 +140,21 @@ $("#asier").click(function() {
 });
 
 //GOOGLE MAPS
-/*var map;
-var myOptions = {
-    zoom: 15,
-    center: new google.maps.LatLng(25.254322,55.259686),
-    mapTypeId: 'roadmap'
-};
-map = new google.maps.Map($('#map')[0], myOptions)*/
 function initialize() {
-  var myLatlng = new google.maps.LatLng(25.077009,55.131147);
+  var myLatlng = new google.maps.LatLng(25.068826,55.14748);
   var mapOptions = {
     zoom: 15,
     center: myLatlng,
+    panControl:false,
+    zoomControl:false,
+    streetViewControl:false,
     mapTypeId: google.maps.MapTypeId.ROADMAP
   }
   var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
 
   var iconBase = 'http://adrielzarate.com.ar/netmedia/';
-  var newMyLatlng = new google.maps.LatLng(25.068826,55.14748);
   var marker = new google.maps.Marker({
-      position:newMyLatlng,
+      position:myLatlng,
       map: map,
       title: 'NetMedia Factory',
       icon: iconBase + 'icon-home.png'
@@ -167,32 +162,3 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
-
-
-//TRIANGULO GOOGLE MAPS
-function trianguloGoogle(){
-    if ($(window).width() > 1000) {
-        $("#ampliar").hover(function(){
-            $("#triangulo").animate({
-                borderWidth: "700px 1000px 0 0"
-            }, 500 );
-        });
-        $("#triangulo").hover(function(){
-            $("#triangulo").animate({
-                borderWidth: "1200px 1500px 0 0"
-            }, 500 );
-        });
-    }
-    else {
-        $("#ampliar").hover(function(){
-            $("#triangulo").animate({
-                borderWidth: "800px 800px 0 0"
-            }, 500 );
-        });
-        $("#triangulo").hover(function(){
-            $("#triangulo").animate({
-                borderWidth: "1000px 1000px 0 0"
-            }, 500 );
-        });
-    }
-}

@@ -330,7 +330,7 @@ background-image: url('../img/fancybox_sprite@2x.png');
 }
 /* Contact Adriel */
 .contact{
-    background:#B3B3B3;
+    background:#fff;
     position:relative;
 }
 .contact .content{
@@ -340,10 +340,12 @@ background-image: url('../img/fancybox_sprite@2x.png');
     z-index:20;
 }
 #map-container{
-    width: 100%;
+    width: 50%;
     height: 100%;
     position:relative;
     z-index:0;
+    height: 100%;
+    float:right;
 }
 #map-container-2{
     position: absolute;
@@ -657,6 +659,13 @@ nav li{
 	.column2{
 		padding-left: 5em;
 	}
+    #map-container{
+        width: 100%;
+        height: 50%;
+        position:absolute;
+        bottom:0;
+        float:none;
+    }
 }
 @media only screen and (max-width: 40em) {
     .column1{
@@ -745,9 +754,6 @@ nav li{
     }
     .portfolio .content{
         width:90%;
-    }
-    #map-container{
-        display:none;
     }
     .cbp-spmenu-left.cbp-spmenu-open {
     border-right: 0;
