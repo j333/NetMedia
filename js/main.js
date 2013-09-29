@@ -56,16 +56,6 @@ $(window).resize(function() {
     }
 });
 
-//ACCORDION
-$(".vision h2").click(function() {
-    if( $(this).next("p").is(":visible")){
-    	$(this).next("p").slideUp("fast");
-    	}
-    	else {
-        	$(".vision p").slideUp("fast");
-        	$(this).next("p").slideToggle("fast");
-    }
-});
 // PORTFOLIO
 $("#sig_portfolio,#ant_portfolio").click(function(){
     $(".set1,.set2").fadeToggle("fast");
