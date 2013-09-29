@@ -95,36 +95,38 @@ $(document).ready(function() {
 $(".profile").click(function() {
     if( $(this).next(".column2").is(":visible")){
         $(".profile").removeClass("profile-active");
-        }
-        else {
-            $(".profile").removeClass("profile-active");
-            $( this ).toggleClass("profile-active");
-            }
+    }else {
+        $(".profile").removeClass("profile-active");
+        $( this ).toggleClass("profile-active");
+    }
 });
 $(".profile-info-close").click(function() {
     $(".about .column2").hide("slow");
     $(".profile").removeClass("profile-active");
+    $('.about').animate({scrollTop:$(".about").offset().top}, 500);
+    return false;
 });
+
+var altoScroll = $('.equipe').height() + 500;
+alert(altoScroll);
+
 $("#ivan").click(function() {
     $("#ivan-info").show("slow");
     $("#ally-info").hide(0);
     $("#asier-info").hide(0);
-    $('.about').animate({scrollTop:$("#ivan-info").offset().top}, 750);
-     return false;
+    $('.about').animate({scrollTop:altoScroll}, 750);
 });
 $("#ally").click(function() {
     $("#ally-info").show("slow");
     $("#ivan-info").hide(0);
     $("#asier-info").hide(0);
-    $('.about').animate({scrollTop:$("#ally-info").offset().top}, 750);
-     return false;
+    $('.about').animate({scrollTop:altoScroll}, 750);
 });
 $("#asier").click(function() {
     $("#asier-info").show("slow");
     $("#ivan-info").hide(0);
     $("#ally-info").hide(0);
-    $('.about').animate({scrollTop:$("#asier-info").offset().top}, 750);
-     return false;
+    $('.about').animate({scrollTop:altoScroll}, 750);
 });
 
 //GOOGLE MAPS
