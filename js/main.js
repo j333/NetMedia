@@ -42,12 +42,10 @@ showMenu.onclick = function() {
 };
 
 $(document).ready(function () {
-    trianguloGoogle();
     windowsize = $(window).width();
 });
 
 $(window).resize(function() {
-    trianguloGoogle();
     windowsize = $(window).width();
     if (windowsize > 700){
         $(".cbp-spmenu-left ul").css({ 'margin-top' : '0px'});
