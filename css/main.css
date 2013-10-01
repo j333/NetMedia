@@ -140,11 +140,10 @@ section{
     padding-left: 5em;
 }
 .column2{
-    color: #fff;
     width: -webkit-calc(100% - 40em);
     width: -moz-calc(100% - 40em);
     width: calc(100% - 40em);
-    border-left: 5px solid rgba(0, 0, 0, 0.12);
+	background-color:#fafafa;
 }
 .text{
     max-width: 31em;
@@ -203,27 +202,17 @@ article{
     margin: 20px 0;
     background:transparent url("../img/logo-big.png") no-repeat scroll;
 }
-.vision .column2{
-    background-color: #22BD0D;
-}
 .vision strong{
     color: #22BD0D;
 }
-.portfolio .column2{
-    background-color: #FFC800;
-}
 .portfolio strong{
     color: #FFC800;
-}
-.about .column2{
-    background-color: #FF6E00;
-    display: none;
 }
 .about strong{
     color: #FF6E00;
 }
 .about .column2 strong {
-    color: #fff;
+    color: #B3B3B3;
 }
 .contact {
     background-color: #FF1C36;
@@ -256,6 +245,14 @@ article{
 /* Vision */
 .items-vision {
     float: left;
+	border-bottom: 1px solid #f1f1f1;
+	margin-top:1em;
+}
+.items-vision:last-child {
+	border-bottom: 0px solid #f1f1f1;
+}
+.items-vision:first-child {
+	margin-top:none;
 }
 .icon-vision {
     height: 218px;
@@ -273,10 +270,6 @@ article{
     background: url('../img/vision-icons.png') no-repeat center -436px;
 }
 /* About us */
-.about{
-    background:transparent url("../img/about.png") no-repeat scroll;
-    background-position: right bottom;
-}
 .equipe{
     margin-top: 20px;
 	float:left;
@@ -368,7 +361,7 @@ nav ul{
     padding: 0;
     margin: 0;
     height: 100%;
-    background-color: #f1f1f1;
+    background-color: #fafafa;
     padding-left: 85px;
 }
 nav li{
@@ -428,11 +421,12 @@ nav li{
 /* Vertical menu that slides from the left */
 
 .cbp-spmenu-left {
-    left: -578px;
+    left: -535px;
+	border-right: 5px solid #f1f1f1;
 } 
 .cbp-spmenu-left.cbp-spmenu-open {
     left: 0px;
-    border-right: 5px solid rgba(0, 0, 0, 0.12);
+    border-right: 1px solid #f1f1f1;
 }
  
 .cbp-spmenu-left.cbp-spmenu-hover {
@@ -456,31 +450,31 @@ nav li{
 .ascensorLink0 {
     background-position: 7px 0;
 }
-.ascensorLink0:hover {
+.ascensorLink0:hover, .ascensorLink0.ascensorLinkActive {
     background-position: 7px -90px;
 }
 .ascensorLink1 {
     background-position: -75px 0;
 }
-.ascensorLink1:hover {
+.ascensorLink1:hover, .ascensorLink1.ascensorLinkActive {
     background-position: -75px -90px;
 }
 .ascensorLink2 {
     background-position: -155px 0;
 }
-.ascensorLink2:hover {
+.ascensorLink2:hover, .ascensorLink2.ascensorLinkActive {
     background-position: -155px -90px;
 }
 .ascensorLink3 {
     background-position: -235px 0;
 }
-.ascensorLink3:hover {
+.ascensorLink3:hover, .ascensorLink3.ascensorLinkActive {
     background-position: -235px -90px;
 }
 .ascensorLink4 {
     background-position: -315px 0;
 }
-.ascensorLink4:hover {
+.ascensorLink4:hover, .ascensorLink4.ascensorLinkActive {
     background-position: -315px -90px;
 }
 .buttom-home:hover {

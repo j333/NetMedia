@@ -136,7 +136,7 @@ $("#asier").click(function() {
 
 //GOOGLE MAPS
 function initialize() {
-  var myLatlng = new google.maps.LatLng(25.068826,55.14748);
+    var myLatlng = new google.maps.LatLng(25.068826,55.14748);
   var mapOptions = {
     zoom: 15,
     center: myLatlng,
@@ -157,3 +157,11 @@ function initialize() {
 }
 
 google.maps.event.addDomListener(window, 'load', initialize);
+
+
+
+
+
+
+
+
