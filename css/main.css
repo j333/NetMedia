@@ -747,7 +747,7 @@ nav li{
         padding: 0;
     }
 	.text {
-		padding:4em 2em;
+		padding:4em 1em;
 	}
     .home .logo{
         background-size:80%;
@@ -763,7 +763,7 @@ nav li{
         background-image:none;
     }
     .icon-vision {
-        max-width: 265px;
+        width: 100%;
         margin: 2em auto 0 auto;
         float: none;
     }
