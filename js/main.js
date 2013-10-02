@@ -135,28 +135,87 @@ $("#asier").click(function() {
 });
 
 //GOOGLE MAPS
-function initialize() {
-    var myLatlng = new google.maps.LatLng(25.068826,55.14748);
-  var mapOptions = {
-    zoom: 15,
-    center: myLatlng,
-    panControl:false,
-    zoomControl:false,
-    streetViewControl:false,
-    mapTypeId: google.maps.MapTypeId.ROADMAP
-  }
-  var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
+window.onload = function () {
+    var styles = [
+        {
+            featureType: 'water',
+            elementType: 'all',
+            stylers: [
+                { hue: '#ffffff' },
+                { saturation: -100 },
+                { lightness: 100 },
+                { visibility: 'on' }
+            ]
+        },{
+            featureType: 'road',
+            elementType: 'all',
+            stylers: [
+                { hue: '#FF1C36' },
+                { saturation: 100 },
+                { lightness: -13 },
+                { visibility: 'on' }
+            ]
+        },{
+            featureType: 'poi',
+            elementType: 'all',
+            stylers: [
+                { hue: '#f1f1f1' },
+                { saturation: -100 },
+                { lightness: 75 },
+                { visibility: 'off' }
+            ]
+        },{
+            featureType: 'administrative',
+            elementType: 'all',
+            stylers: [
+                { hue: '#ffffff' },
+                { saturation: 0 },
+                { lightness: 100 },
+                { visibility: 'off' }
+            ]
+        },{
+            featureType: 'poi.business',
+            elementType: 'all',
+            stylers: [
+                { hue: '#ffffff' },
+                { saturation: -100 },
+                { lightness: 100 },
+                { visibility: 'off' }
+            ]
+        }
+    ];
 
-  var iconBase = 'http://hotelcalafquen.com/img/';
-  var marker = new google.maps.Marker({
-      position:myLatlng,
-      map: map,
-      title: 'NetMedia Factory',
-      icon: iconBase + 'icon-home.png'
-  });
+var options = {
+    mapTypeControlOptions: {
+        mapTypeIds: ['Styled']
+    },
+    center: new google.maps.LatLng(25.090826,55.14248),
+    zoom: 13,
+    disableDefaultUI: true, 
+    mapTypeId: 'Styled'
+};
+var div = document.getElementById('map-canvas');
+var map = new google.maps.Map(div, options);
+
+
+var companyLogo = new google.maps.MarkerImage('img/map.png',
+    new google.maps.Size(100,56),
+    new google.maps.Point(0,0),
+    new google.maps.Point(50,50)
+);
+var companyPos = new google.maps.LatLng(25.069491,55.146337);
+var companyMarker = new google.maps.Marker({
+    position: companyPos,
+    map: map,
+    icon: companyLogo,
+    title:"NetMedia Factory"
+});
+
+var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
+map.mapTypes.set('Styled', styledMapType);
+
 }
 
-google.maps.event.addDomListener(window, 'load', initialize);
 
 
 
