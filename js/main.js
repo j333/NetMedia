@@ -150,9 +150,9 @@ window.onload = function () {
             featureType: 'road',
             elementType: 'all',
             stylers: [
-                { hue: '#FF1C36' },
-                { saturation: 100 },
-                { lightness: -13 },
+                { hue: '#b3b3b3' },
+                { saturation: -100 },
+                { lightness: 17 },
                 { visibility: 'on' }
             ]
         },{
@@ -199,7 +199,7 @@ var map = new google.maps.Map(div, options);
 
 
 var companyLogo = new google.maps.MarkerImage('img/map.png',
-    new google.maps.Size(100,56),
+    new google.maps.Size(45,50),
     new google.maps.Point(0,0),
     new google.maps.Point(50,50)
 );
