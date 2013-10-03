@@ -436,7 +436,6 @@ nav li{
 
 .cbp-spmenu-left {
     left: -535px;
-	border-right: 5px solid #f1f1f1;
 } 
 .cbp-spmenu-left.cbp-spmenu-open {
     left: 0px;

@@ -28,7 +28,7 @@ author: Léo Galley <contact@kirkas.ch>
         // specify if direction is x,y or chocolate
         ascensorMap: "y",
         // If you choose chocolate for direction, speficy position
-        time: "1000",
+        time: 400,
         // Specify speed of transition
         easing: "easeOutQuart",
         // Specify easing option
