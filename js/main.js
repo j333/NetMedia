@@ -84,6 +84,7 @@ jQuery.each( cant_pics, function() {
 
 $(document).ready(function() {
     $(".fancybox").fancybox();
+	$('#ri-grid').gridrotator();
 });
 // VISION
 /*$(".profile").click(function() {
