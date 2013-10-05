@@ -65,7 +65,7 @@
 			pixelRatio: 1, // Set to 2 for retina display support
 
 			autoSize   : true,
-			autoHeight : false,
+			autoHeight : true,
 			autoWidth  : false,
 
 			autoResize  : true,
@@ -137,7 +137,7 @@
 
 			// HTML templates
 			tpl: {
-				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-outer"><div class="fancybox-inner"></div></div></div></div>',
+				wrap     : '<div class="fancybox-wrap" tabIndex="-1"><div class="fancybox-skin"><div class="fancybox-inner"></div></div></div>',
 				image    : '<img class="fancybox-image" src="{href}" alt="" />',
 				iframe   : '<iframe id="fancybox-frame{rnd}" name="fancybox-frame{rnd}" class="fancybox-iframe" frameborder="0" vspace="0" hspace="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen' + (IE ? ' allowtransparency="true"' : '') + '></iframe>',
 				error    : '<p class="fancybox-error">The requested content cannot be loaded.<br/>Please try again later.</p>',
@@ -148,28 +148,28 @@
 
 			// Properties for each animation type
 			// Opening fancyBox
-			openEffect  : 'fade', // 'elastic', 'fade' or 'none'
-			openSpeed   : 250,
+			openEffect  : 'none', // 'elastic', 'fade' or 'none'
+			openSpeed   : 300000,
 			openEasing  : 'swing',
-			openOpacity : true,
+			openOpacity : false,
 			openMethod  : 'zoomIn',
 
 			// Closing fancyBox
-			closeEffect  : 'fade', // 'elastic', 'fade' or 'none'
+			closeEffect  : 'none', // 'elastic', 'fade' or 'none'
 			closeSpeed   : 250,
 			closeEasing  : 'swing',
 			closeOpacity : true,
 			closeMethod  : 'zoomOut',
 
 			// Changing next gallery item
-			nextEffect : 'elastic', // 'elastic', 'fade' or 'none'
+			nextEffect : 'none', // 'elastic', 'fade' or 'none'
 			nextSpeed  : 250,
 			nextEasing : 'swing',
 			nextMethod : 'changeIn',
 
 			// Changing previous gallery item
-			prevEffect : 'elastic', // 'elastic', 'fade' or 'none'
-			prevSpeed  : 250,
+			prevEffect : 'none', // 'elastic', 'fade' or 'none'
+			prevSpeed  : 900,
 			prevEasing : 'swing',
 			prevMethod : 'changeOut',
 
@@ -924,7 +924,7 @@
 			$.extend(F.coming, {
 				type       : 'html',
 				autoWidth  : true,
-				autoHeight : true,
+				autoHeight : false,
 				minWidth   : 0,
 				minHeight  : 0,
 				scrolling  : 'no',

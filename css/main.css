@@ -174,10 +174,6 @@ section{
     background-image: url("../img/icons.png");
     background-position: -315px -90px;
 }
-article{
-    padding: 20px;
-}
-
 .portfolio article{
     margin-left: 10px;
 }
@@ -283,7 +279,7 @@ article{
 }
 .items-vision:hover h2,.items-vision:hover p{
     opacity:1;
-    left:60%;
+    left:190px;
 }
 .icon-vision.friendly {
     background: url('../img/vision-icons.png') no-repeat center 0;
@@ -549,8 +545,7 @@ nav li{
     margin: 0;
 }
 .portfolio{
-    overflow: scroll;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .portfolio .column2{
     position: relative;
@@ -619,7 +614,7 @@ nav li{
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: #333;
+    background-color: #fafafa;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -634,6 +629,9 @@ nav li{
 .ri-grid-size-3{
     width: 100%;
     margin-top: 0px;
+    position: absolute;
+    top: 50%;
+    margin-top: -50%;
 }
 /* Shadow style */
 .ri-shadow:after,
@@ -684,6 +682,11 @@ nav li{
     -mox-filter: grayscale(100%);
     filter: grayscale(100%);
 }
+#ri-grid a:hover{
+    -webkit-filter: grayscale(0%);
+    -mox-filter: grayscale(0%);
+    filter: grayscale(0%);
+}
 #ri-grid a:hover:after{
     content:"";
     display:block;
@@ -701,7 +704,8 @@ nav li{
     height:100% !important;
 }
 .fancybox-inner{
-    height:100% !important ;
+    min-height:100% !important ;
+    height: auto !important;
 }
 .fancybox-opened {
     width:100% !important;
@@ -714,25 +718,20 @@ nav li{
 }
 .fancybox-inner {
     width: auto !important;
-    background-color:#fff;
+    background-color:#fafafa;
 }
 .fancybox-inner .column1,.fancybox-inner .column2{
-    /*width:45% !important;*/
-    width: 45%!important;
     display:inline-block !important;
 }
 .fancybox-inner .column1{
-    vertical-align:top;
-    padding:0 !important;
 }
 .fancybox-inner .column2{
     position:absolute;
     height:100%;
-    top:0;
-    right:0;
-    width: -webkit-calc(100% - 40em) !important;
-    width: -moz-calc(100% - 40em) !important;
-    width: calc(100% - 40em) !important;
+    width: -webkit-calc(100% - 40em);
+    width: -moz-calc(100% - 40em);
+    width: calc(100% - 40em);
+    background-size: cover;
 }
 .fancybox-inner .column2 div{
     background-color:#999;
@@ -745,9 +744,36 @@ nav li{
     -moz-box-sizing:border-box;
     box-sizing:border-box;
 }
-
-.fancybox-inner .column2 img{
-    width:100% !important;
+#description1 .column2{
+    background-image: url(../img/1.jpg);
+}
+#description2 .column2{
+    background-image: url(../img/2.jpg);
+}
+#description3 .column2{
+    background-image: url(../img/3.jpg);
+}
+#description4 .column2{
+    background-image: url(../img/4.jpg);
+}
+#description5 .column2{
+    background-image: url(../img/5.jpg);
+}
+#description6 .column2{
+    background-image: url(../img/6.jpg);
+}
+#description7 .column2{
+    background-image: url(../img/7.jpg);
+}
+#description8 .column2{
+    background-image: url(../img/8.jpg);
+}
+#description9 .column2{
+    background-image: url(../img/9.jpg);
+}
+.none:hover:after {
+    cursor: default;
+    display: none!important;
 }
 /* ==========================================================================
    Media Queries
@@ -807,6 +833,19 @@ nav li{
         opacity:1;
         left:50%;
     }
+    .ri-grid-size-3 {
+        top: 0;
+        margin-top: 0;
+    }
+
+    .fancybox-inner .column1,.fancybox-inner .column2{
+        width:100% !important;
+        display:block; !important;
+    }
+    .fancybox-inner .column2 div{
+        position:static;
+        width:100%;
+    }
 }
 @media only screen and (max-width: 1000px) {
     strong{
@@ -814,20 +853,6 @@ nav li{
     }
     .vision{
         background-position: 150% -150%;
-    }
-}
-@media only screen and (max-width: 800px){
-    .fancybox-inner .column1,.fancybox-inner .column2{
-        width:100% !important;
-        display:block; !important;
-    }
-    .fancybox-inner .column2{
-        position:static;
-        padding:0;
-    }
-    .fancybox-inner .column2 div{
-        position:static;
-        width:100%;
     }
 }
 @media only screen and (max-width: 40em) {
@@ -930,6 +955,9 @@ nav li{
 	.text {
 		padding:4em 1em;
 	}
+    article .text {
+        padding: 1em;
+    }
     .home .logo{
         background-size:80%;
     }

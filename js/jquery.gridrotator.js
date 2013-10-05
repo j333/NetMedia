@@ -117,8 +117,8 @@
 		rows : 4,
 		// number of columns 
 		columns : 4,
-		w1024 : { rows : 4, columns : 4 },
-		w768 : {rows : 3,columns : 3 },
+		w1024 : { rows : 5, columns : 5 },
+		w768 : {rows : 4,columns : 4 },
 		w480 : {rows : 3,columns : 2 },
 		w320 : {rows : 3,columns : 2 },
 		w240 : {rows : 2,columns : 3 },
@@ -127,7 +127,7 @@
 		// note: for performance issues, the number "can't" be > options.maxStep
 		step : 'random',
 		// change it as you wish..
-		maxStep : 2,
+		maxStep : 5,
 		// prevent user to click the items
 		preventClick : false,
 		// animation type
@@ -138,7 +138,7 @@
 		// rotate3d ||
 		// rotateLeftScale || rotateRightScale || rotateTopScale || rotateBottomScale || 
 		// random
-		animType : 'random',
+		animType : 'slideRight',
 		// animation speed
 		animSpeed : 800,
 		// animation easings
