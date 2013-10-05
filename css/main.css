@@ -98,7 +98,7 @@ strong{
 }
 .ascensorLinkNext{
     width: 61px;
-    height: 22px;
+    height: 30px;
     background-image: url("../img/icons.png");
     background-position: -49px -187px;
 }
@@ -110,12 +110,12 @@ strong{
     margin: 40px auto;
 }
 .ascensorLinkPrev{
-    width: 26px;
-    height: 9px;
-    background-image: url("../img/icons.png");
-    background-position: -125px -185px;
-    margin: 6px auto 0;
-    background-repeat: no-repeat;
+	width: 61px;
+	height: 30px;
+	background-image: url("../img/icons.png");
+	background-position: -116px -165px;
+	background-repeat: no-repeat;
+	margin-top: -15px;
 }
 .ascensorLinkActive{
     background-color: #fff;
@@ -432,15 +432,13 @@ nav li{
     -webkit-transition: all 0.1s ease;
     -moz-transition: all 0.1s ease;
     transition: all 0.1s ease;
-    padding-top: 5px;
-    background-position-y: -183px;
+    background-position: -49px -183px;
 }
 .ascensorLinkPrev:hover{
     -webkit-transition: all 0 ease;
-    -moz-transition: all 0 ease;
-    transition: all 0 ease;
-    margin-top: 4px;
-    padding-bottom: 2px;
+	-moz-transition: all 0 ease;
+	transition: all 0 ease;
+	background-position: -116px -168px;
 }
 
 /* Orientation-dependent styles for the content of the menu */
@@ -885,7 +883,7 @@ nav li{
         position: fixed;
     }
     .cbp-spmenu .ascensorLinkPrev{
-        margin-left:-21px;
+        margin-left:-32px;
         top:-70px;   
         transition: top .5s;
         -webkit-transition: top .5s;
