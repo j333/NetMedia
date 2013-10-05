@@ -240,13 +240,30 @@ article{
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */
-
 }
 /* Vision */
 .items-vision {
     float: left;
 	border-bottom: 1px solid #f1f1f1;
 	margin-top:1em;
+    width:100%;
+    position:relative;
+}
+.items-vision:nth-child(2){
+    padding-bottom:50px;
+}
+.items-vision h2,.items-vision p{
+    position:absolute;
+    left:0;
+    width:70%;
+    opacity:0;
+    transition: 1s ease;
+}
+.items-vision h2{
+    top:0;
+}
+.items-vision p{
+    top:20px;
 }
 .items-vision:last-child {
 	border-bottom: 0px solid #f1f1f1;
@@ -257,8 +274,16 @@ article{
 .icon-vision {
     height: 218px;
     width: 265px;
-    margin: 0 0 2em -85px;
-    float: left;
+    margin: 0 auto;
+    margin-left:85px;
+    transition: 1s ease;
+}
+.items-vision:hover .icon-vision{
+    margin-left:-85px;
+}
+.items-vision:hover h2,.items-vision:hover p{
+    opacity:1;
+    left:44%;
 }
 .icon-vision.friendly {
     background: url('../img/vision-icons.png') no-repeat center 0;
@@ -656,9 +681,7 @@ nav li{
     display: block;
 }
 /**/
-#ri-grid img{
-    filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); /* Firefox 10+, Firefox on Android */
-    filter: gray; /* IE6-9 */
+#ri-grid a{
     -webkit-filter: grayscale(100%);
 }
 #ri-grid a:hover:after{
