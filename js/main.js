@@ -86,19 +86,6 @@ $(document).ready(function() {
     $(".fancybox").fancybox();
 	$('#ri-grid').gridrotator();
 });
-// VISION
-/*$(".profile").click(function() {
-    if( $(this).next(".column2").is(":visible")){
-        $(this).next(".column2").slideUp("fast");
-        $(".profile").removeClass("profile-active");
-        }
-        else {
-            $(".about .column2").slideUp("fast");
-            $(this).next(".column2").slideToggle("slow");
-            $(".profile").removeClass("profile-active");
-            $( this ).toggleClass("profile-active");
-    }
-});*/
 $(".profile").click(function() {
     if( $(this).next(".column2").is(":visible")){
         $(".profile").removeClass("profile-active");
@@ -114,24 +101,32 @@ $(".profile-info-close").click(function() {
     return false;
 });
 
-var altoScroll = $('.equipe').height() + 1000;
-
 $("#ivan").click(function() {
     $("#ivan-info").show("slow");
     $("#ally-info").hide(0);
     $("#asier-info").hide(0);
+    $("#maroun-info").hide(0);
     $('.about').animate({scrollTop:altoScroll}, 750);
 });
 $("#ally").click(function() {
     $("#ally-info").show("slow");
     $("#ivan-info").hide(0);
     $("#asier-info").hide(0);
+    $("#maroun-info").hide(0);
     $('.about').animate({scrollTop:altoScroll}, 750);
 });
 $("#asier").click(function() {
     $("#asier-info").show("slow");
     $("#ivan-info").hide(0);
+    $("#ally-info").hide(0);    
+    $("#maroun-info").hide(0);
+    $('.about').animate({scrollTop:altoScroll}, 750);
+});
+$("#maroun").click(function() {
+    $("#maroun-info").show("slow");
+    $("#ivan-info").hide(0);
     $("#ally-info").hide(0);
+    $("#asier-info").hide(0);
     $('.about').animate({scrollTop:altoScroll}, 750);
 });
 

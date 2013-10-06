@@ -63,6 +63,7 @@ html, body {
     overflow: hidden;
     height:100%;
     overflow-y:hidden;
+    background-color: #fff;
 }
 h1,h2,h3{
     text-transform: uppercase;
@@ -143,7 +144,7 @@ section{
     width: -webkit-calc(100% - 40em);
     width: -moz-calc(100% - 40em);
     width: calc(100% - 40em);
-	background-color:#fafafa;
+    background-color: #fafafa;
 }
 .text{
     max-width: 31em;
@@ -294,9 +295,10 @@ section{
 .equipe{
     margin-top: 20px;
 	float:left;
+    text-align: center;
 }
 .profile {
-    margin: 0;
+    margin: 0 auto;
     float: left;
     -webkit-filter: grayscale(100%);
     -moz-filter: grayscale(100%);
@@ -304,49 +306,47 @@ section{
     cursor: pointer;
     display: block;
     overflow: hidden;
-    -webkit-transition: border-color 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
-    -moz-transition: border-color 0.5s ease-out;  /* Firefox 4-15 */
-    -o-transition: border-color 0.5s ease-out;  /* Opera 10.50–12.00 */
-    transition: border-color 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
+    -webkit-transition: filter 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: filter 0.5s ease-out;  /* Firefox 4-15 */
+    -o-transition: filter 0.5s ease-out;  /* Opera 10.50–12.00 */
+    transition: filter 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 
 }
 .profile:hover {
-    width: 230px;
-    height: 230px;
-    border: 5px solid #fff;
+    width: 210px;
+    height: 210px;
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     filter: grayscale(0%);
 
 }
 .profile-active {
-    width: 230px;
-    height: 230px;
-    border: 5px solid #FF6E00;
+    width: 210px;
+    height: 210px;
     -webkit-filter: grayscale(0%);
     -moz-filter: grayscale(0%);
     filter: grayscale(0%);
 }
 .profile-active:hover {
     cursor: default;
-    border: 5px solid #FF6E00;
 }
 .profile img{
     display: block;
+    width: 210px;
+    height: 210px;
 }
 .profile:hover img{
-    margin: -5px 0 0 -5px;
 }
 .profile-active img{
-    margin: -5px 0 0 -5px;
 }
 .profile-info-close {
 height: 70px;
 width: 70px;
 cursor: pointer;
 position: absolute;
-top: 10px;
+top: 50%;
 right: 10px;
+margin-top: -35px;
 background-image: url('../img/fancybox_sprite@2x.png');
 }
 .profile-icon{
@@ -362,6 +362,9 @@ background-image: url('../img/fancybox_sprite@2x.png');
 }
 .profile-icon-maroun{
     background-position: 0 -135px;
+}
+.about .column2{
+    display: none;
 }
 /* Contact Adriel */
 .contact{
@@ -546,9 +549,11 @@ nav li{
 }
 .portfolio{
     overflow: hidden;
+    background-color: #555
 }
 .portfolio .column2{
     position: relative;
+    background-color: transparent;
 }
 .portfolio article{
     display:none;
@@ -589,7 +594,6 @@ nav li{
     position: relative;
     display: block;
     overflow: hidden;
-    background: #000;
 }
 .ri-grid ul li a{
     display: block;
@@ -614,7 +618,6 @@ nav li{
     background-size: 100% 100%;
     background-position: center center;
     background-repeat: no-repeat;
-    background-color: #fafafa;
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
     box-sizing: content-box;
@@ -810,6 +813,11 @@ nav li{
     .portfolio .column2 li{
         float:right;
     }
+    .about .column2{
+        min-height: 100%;
+        position: absolute;
+        z-index: 999;
+    }
     #map-container{
         width: 100%;
         height: 50%;
@@ -934,7 +942,7 @@ nav li{
     .ascensorLink4{
         background-image: url("../img/icon-contact.png");
     }
-    .ascensorLink:hover {
+    .ascensorLink:hover, .ascensorLink.ascensorLinkActive {
         background-position: center center;
     }
     .content strong{
@@ -1002,6 +1010,20 @@ nav li{
     }
     .items-vision:hover .icon-vision{
         margin-left:0px;
+    }
+    .profile-info-close,.fancybox-close {
+        top: 10px;
+        right: 10px;
+        margin-top: 0px;
+        background-color: transparent;
+    }
+}
+@media only screen and (max-width: 31em) {
+    .profile, .profile:hover{
+        width: 100%;
+    }
+    .profile img{
+        margin: 0 auto;
     }
 }
 
