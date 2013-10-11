@@ -1,7 +1,7 @@
 // PRELOADER
-$(window).load(function() { // makes sure the whole site is loaded
-	$("#status").fadeOut(); // will first fade out the loading animation
-	$("#preloader").delay(350).fadeOut("slow"); // will fade out the white DIV that covers the website.
+$(window).load(function() {
+	$("#status").fadeOut();
+	$("#preloader").delay(350).fadeOut("slow");
     $("html").css({ 'overflow-y' : 'auto'});
     $("body").css({ 'overflow-y' : 'auto'});
 })
@@ -86,6 +86,7 @@ $(document).ready(function() {
     $(".fancybox").fancybox();
 	$('#ri-grid').gridrotator();
 });
+
 $(".profile").click(function() {
     if( $(this).next(".column2").is(":visible")){
         $(".profile").removeClass("profile-active");
@@ -94,6 +95,7 @@ $(".profile").click(function() {
         $( this ).toggleClass("profile-active");
     }
 });
+
 $(".profile-info-close").click(function() {
     $(".about .column2").hide("slow");
     $(".profile").removeClass("profile-active");
@@ -101,33 +103,26 @@ $(".profile-info-close").click(function() {
     return false;
 });
 
-$("#ivan").click(function() {
-    $("#ivan-info").show("slow");
+function mostrarUs(nombre){
+    $("#ivan-info").hide(0);
     $("#ally-info").hide(0);
     $("#asier-info").hide(0);
     $("#maroun-info").hide(0);
+    $(nombre).show("slow");
     $('.about').animate({scrollTop:altoScroll}, 750);
+}
+
+$("#ivan").click(function() {
+    mostrarUs("#ivan-info");
 });
 $("#ally").click(function() {
-    $("#ally-info").show("slow");
-    $("#ivan-info").hide(0);
-    $("#asier-info").hide(0);
-    $("#maroun-info").hide(0);
-    $('.about').animate({scrollTop:altoScroll}, 750);
+    mostrarUs("#ally-info");
 });
 $("#asier").click(function() {
-    $("#asier-info").show("slow");
-    $("#ivan-info").hide(0);
-    $("#ally-info").hide(0);    
-    $("#maroun-info").hide(0);
-    $('.about').animate({scrollTop:altoScroll}, 750);
+    mostrarUs("#asier-info");
 });
 $("#maroun").click(function() {
-    $("#maroun-info").show("slow");
-    $("#ivan-info").hide(0);
-    $("#ally-info").hide(0);
-    $("#asier-info").hide(0);
-    $('.about').animate({scrollTop:altoScroll}, 750);
+    mostrarUs("#maroun-info");
 });
 
 $(".icon").hover(function(){

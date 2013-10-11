@@ -244,17 +244,27 @@ section{
     background-color:#0071CF; /* change if the mask should have another color then white */
     z-index:99; /* makes sure it stays on top */
 }
+@keyframes cargando {
+  to {opacity:.2;}
+}
+@-webkit-keyframes cargando {
+  to {color:.2;}
+}
 #status {
     width:200px;
     height:200px;
     position:absolute;
     left:50%; /* centers the loading animation horizontally one the screen */
     top:50%; /* centers the loading animation vertically one the screen */
-    background-image:url(../img/status.gif); /* path to your loading animation */
+    background-image:url(../img/loader.png); /* path to your loading animation */
+    background-size:100%;
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */
+    animation: cargando 0.8s infinite alternate;
+    -webkit-animation: cargando 0.8s infinite alternate;
 }
+
 /* Vision */
 .items-vision {
     float: left;
@@ -364,8 +374,8 @@ section{
     transition: .5s ease;
 }
 .profile-info-close:hover {
-    -webkit-transform: scale(1.2, 1.2);
-    transform: scale(1.2, 1.2);
+    -webkit-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
 }
 .profile-icon{
     width: 45px;
