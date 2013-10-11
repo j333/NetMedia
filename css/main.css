@@ -118,9 +118,6 @@ strong{
 	background-repeat: no-repeat;
 	margin-top: -15px;
 }
-.ascensorLinkActive{
-    background-color: #fff;
-}
 .container {
     min-height:100%;
 }
@@ -158,6 +155,8 @@ section{
     position: absolute;
     left: -2px;
     margin-top: 9px;
+    background-repeat: no-repeat;
+	z-index:1;
 }
 .vision .icon{
     background-image: url("../img/icons.png");
@@ -181,7 +180,9 @@ section{
 /* PARTICULARIDADES DE CADA SECCIÓN */
 .home{
     color: #ffffff;
-    background: #0071cf url("../img/home.jpg") no-repeat scroll;
+    background: #0071cf no-repeat scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
 }
 .home .column1 {
@@ -201,6 +202,11 @@ section{
 }
 .vision strong{
     color: #22BD0D;
+}
+.vision .column2{
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 .portfolio strong{
     color: #FFC800;
@@ -335,24 +341,21 @@ section{
     width: 210px;
     height: 210px;
 }
-.profile:hover img{
-}
-.profile-active img{
-}
 .profile-info-close {
-height: 70px;
-width: 70px;
-cursor: pointer;
-position: absolute;
-top: 50%;
-right: 10px;
-margin-top: -35px;
-background-image: url('../img/fancybox_sprite@2x.png');
+    height: 70px;
+    width: 70px;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    margin-top: -35px;
+    background-image: url('../img/fancybox_sprite@2x.png');
 }
 .profile-icon{
     width: 45px;
     height: 45px;
-    background-image: url('../img/about-icons.png')
+    background-image: url('../img/about-icons.png');
+    float: left;
 }
 .profile-icon-ivan{
     background-position: 0 -45px;
@@ -363,8 +366,22 @@ background-image: url('../img/fancybox_sprite@2x.png');
 .profile-icon-maroun{
     background-position: 0 -135px;
 }
+.tags{
+    line-height: 1.5em;
+}
+.tags .informal{
+    font-style: italic;
+    font-size: 1.5em;
+}
+.tags .formal{
+    font-weight: 600;
+    font-size: 2em;
+}
 .about .column2{
     display: none;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 /* Contact Adriel */
 .contact{
@@ -379,9 +396,9 @@ background-image: url('../img/fancybox_sprite@2x.png');
 }
 #map-container{
     height: 100%;
-    position:relative;
+	width:100%;
+    position:absolute;
     z-index:0;
-    height: 100%;
     float:right;
 }
 #map-container.column2{
@@ -480,7 +497,7 @@ nav li{
     right: 240px;
 }
 .ascensorLink{
-    background-image: url("../img/icons.png");
+    background: url("../img/icons.png") no-repeat;
 }
 .ascensorLink0 {
     background-position: 7px 0;
@@ -512,6 +529,9 @@ nav li{
 .ascensorLink4:hover, .ascensorLink4.ascensorLinkActive {
     background-position: -315px -90px;
 }
+.ascensorLinkActive{
+    background-color: #fff;
+}
 .buttom-home:hover {
     background-position: 0 -90px;
 }
@@ -533,9 +553,9 @@ nav li{
 }
 .cbp-spmenu,
 .cbp-spmenu-push {
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    transition: all 0.3s ease;
+    -webkit-transition: left 0.5s ease;
+    -moz-transition: left 0.5s ease;
+    transition: left 0.5s ease;
 }
 /*portfolio*/
 *,
@@ -549,7 +569,10 @@ nav li{
 }
 .portfolio{
     overflow: hidden;
-    background-color: #555
+    background-color: #555;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
 }
 .portfolio .column2{
     position: relative;
@@ -734,6 +757,8 @@ nav li{
     width: -webkit-calc(100% - 40em);
     width: -moz-calc(100% - 40em);
     width: calc(100% - 40em);
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
     background-size: cover;
 }
 .fancybox-inner .column2 div{
@@ -888,8 +913,13 @@ nav li{
         margin:0 auto;
     }
     .cbp-spmenu{
-        position:static;
+       	position: absolute;
+		width: 100%;
+		top: 0;
     }
+	.cbp-spmenu-left {
+		left: 0;
+	}
     .cbp-spmenu-vertical {
         margin-top: 0;
     }
@@ -1012,11 +1042,14 @@ nav li{
         margin-left:0px;
     }
     .profile-info-close,.fancybox-close {
-        top: 10px;
-        right: 10px;
+        top: 2px;
+        right: 0;
         margin-top: 0px;
         background-color: transparent;
     }
+	.icon{
+		display:none;
+	}
 }
 @media only screen and (max-width: 31em) {
     .profile, .profile:hover{
@@ -1024,6 +1057,36 @@ nav li{
     }
     .profile img{
         margin: 0 auto;
+    }
+}
+/* ==========================================================================
+   Images background responsive
+   ========================================================================== */
+@media only screen and (max-width: 500px) {
+    .home{  
+        background-image: url("../img/home500.jpg");
+    }
+}
+@media only screen and (min-width: 501px) and (max-width: 1000px){
+    .home{  
+        background-image: url("../img/home1000.jpg");
+    }
+    .portfolio{
+        background-image: url("../img/scrapbook1000.jpg");
+    }
+    .vision .column2{
+        background-image: url("../img/vision1000.jpg");
+    }
+}
+@media only screen and (min-width: 1001px){
+    .home{  
+        background-image: url("../img/home.jpg");
+    }
+    .portfolio{
+        background-image: url("../img/scrapbook.jpg");
+    }
+    .vision .column2, .about .column2{
+        background-image: url("../img/vision.jpg");
     }
 }
 

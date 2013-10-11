@@ -29,6 +29,17 @@
         <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png" />
 
         <script src="js/vendor/modernizr-2.6.2.min.js"></script>
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-19883854-7']);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
     </head>
     <body>
         <!--[if lt IE 7]>
@@ -64,12 +75,12 @@
                 </div>
             </section>
             <section class="vision">
+                <div class="icon"></div>
                 <div class="content column1">
                     <div class="text">
-                        <div class="icon"></div>
                         <h1>Vision</h1>
                         <strong>Customers should get it... Where they here they want it, when they want it and how they want it</strong>
-                        <p>Successful products are the result of good products appealing to the targeted people in the right way.</br>
+                        <p>Successful products are the result of good products appealing to the targeted people in the right way.</ br>
                         Younger generations behave, appreciate, communicate, decide and shop differently from how their parents did. We bridge the gap between good products and younger generations via creating a right way.</p>
                     </div>
                 </div>
@@ -83,7 +94,7 @@
                         <div class="items-vision">
                             <div class="icon-vision friendly"></div>
                             <h2>It should be easy, friendly</h2>
-                            <p>Media, Telco, Live Streaming, VoD, Online, Games, Walls and Blogs, Trends, Alternative retail channels, Search engines and sites... if you are not using these tools and channels probably you are not fully aligned with the way I talk and where I spend my time.</br>
+                            <p>Media, Telco, Live Streaming, VoD, Online, Games, Walls and Blogs, Trends, Alternative retail channels, Search engines and sites... if you are not using these tools and channels probably you are not fully aligned with the way I talk and where I spend my time.</ br>
                             Make my life easy, come and talk to me.</p>
                         </div>
                         <div class="items-vision">
@@ -95,9 +106,9 @@
                 </div>
             </section>
             <section class="portfolio">
+                <div class="icon"></div>
                 <div class="content column1">
                     <div class="text">
-                        <div class="icon"></div>
                         <h1>Scrapbook</h1>
                         <strong>Digital mobility and behavioural personalities</strong>
                         <p>Our aim is to design, deliver and evaluate digital mobility communication plans and set up new distribution channels that appeal to the ‘behavioural personalities’ of your customers.</p>
@@ -244,8 +255,8 @@
                 </div>
             </section>
             <section class="about">
+                <div class="icon"></div>
                 <div class="content column1">
-                    <div class="icon"></div>
                     <div class="text">
                         <h1>Us</h1>
                       	<strong>Equipe</strong>
@@ -265,13 +276,15 @@
                         </div>
                     </div>
                 </div>
+                <div class="content column2 fondo">
+                </div>
                 <div class="content column2" id="ivan-info">
                     <div class="text">
                         <h2>Ivan</h2>
                         <div class="profile-icon profile-icon-ivan"></div>
-                        <strong>The Strategist</strong>
+                        <strong>{The Strategist}</strong>
                         <p>Be it market development, turnaround or competitive growth there is a right way in sales and marketing. He finds joy in developing markets, implementing change and challenging the status quo - if there was no change he would create it.</p>
-                        <p>Tags # 15Y, Telecom, IT, Banking, FMCG, Mobility, Marketing, Channels, Business Development, Change Management, Matrix, Spain, Portugal, UK, Germany, Middle East, Africa, Turkey, Outdoors, Footie, Traveller, Family, Friends, Paella, Team, Why Not</p>
+                        <p  class="tags"><span class="formal">Telecom</span>, IT, Banking, FMCG, <span class="informal">Mobility</span>, Marketing, Channels, <span class="formal">Business Development</span>, Change Management, Matrix, <span class="formal">Spain</span>, Portugal, UK, Germany, Middle East, Africa, Turkey, Outdoors, Footie, Traveller, <span class="informal">Family</span>, Friends, <span class="informal">Paella</span>, Team, Why Not</p>
                     </div>
                     <div class="profile-info-close"></div>
                 </div>
@@ -279,9 +292,9 @@
                     <div class="text">
                         <h2>Ally</h2>
                         <div class="profile-icon profile-icon-ally"></div>
-                        <strong>The Creative</strong>
+                        <strong>{The Creative}</strong>
                         <p>Creative, Designer and Editor. Our French and English queen - with a whole life in the Middle East - keeps herself busy developing brands and sharpening the edition of magazines, creating designs and localizing marketing ideas for the region.</p>
-                        <p>Tags # 15Y, FMCG, Government, Environment, Media, Brand Creation, Design, Editor, Events, UK, France, Middle East, English, French, Diving, Traveller, Oh là là!, Friends, Muscat, Karma, Moules Frites, Team, Fresh on Mark</p>
+                        <p class="tags">FMCG, Government, Environment, Media, Brand Creation, Design, Editor, Events, UK, France, Middle East, English, French, Diving, Traveller, Oh là là!, Friends, Muscat, Karma, Moules Frites, Team, Fresh on Mark</p>
                     </div>
                     <div class="profile-info-close"></div>
                 </div>
@@ -289,9 +302,9 @@
                     <div class="text">
                         <h2>Asier</h2>
                         <div class="profile-icon profile-icon-asier"></div>
-                        <strong>The Engineer</strong>
+                        <strong>{The Engineer}</strong>
                         <p>Everyone needs a leading IT Engineer to bring common sense out of techie’s universe. Just accept his verdict on how things are going to happen unless you are ready to discuss on neural networks, capability building and acronyms’ mumble jumble.</p>
-                        <p>Tags # 15Y, Government, Military, Transportation, IT Engineering, Big Data, Spanish, Gourmand, Tech, Gaming, Connected, Traveller, Friends, Chuletón de Buey, Team, Can Do</p>
+                        <p  class="tags">Government, Military, Transportation, IT Engineering, Big Data, Spanish, Gourmand, Tech, Gaming, Connected, Traveller, Friends, Chuletón de Buey, Team, Can Do</p>
                     </div>
                     <div class="profile-info-close"></div>
                 </div>
@@ -299,16 +312,16 @@
                     <div class="text">
                         <h2>Maroun</h2>
                         <div class="profile-icon profile-icon-maroun"></div>
-                        <strong>The Communicator</strong>
+                        <strong>{The Communicator}</strong>
                         <p>What to say, when to say it , where to say it and how to say it. Leading the marketing communication efforts of Middle East conglomerates is his everyday life. Identifying communication opportunities as a result of strategic analysis is how he strikes oil.</p>
-                        <p>Tags # 15Y, IT, Construction, Banking, Brand Management, Communication, Canada, Middle East, French, English, Arabic, Viola, Footie, Comedy, Ice Hockey, Family, Friends, Sushi, Team, Opportunity</p>
+                        <p  class="tags">IT, Construction, Banking, Brand Management, Communication, Canada, Middle East, French, English, Arabic, Viola, Footie, Comedy, Ice Hockey, Family, Friends, Sushi, Team, Opportunity</p>
                     </div>
                     <div class="profile-info-close"></div>
                 </div>
             </section>
             <section class="contact">
+                <div class="icon"></div>
                 <div class="content column1">
-                    <div class="icon"></div>
                     <div class="text">
                         <h1>Contact</h1>
                         <strong>Hello</strong>
@@ -333,11 +346,5 @@
         <script src="js/jquery.gridrotator.js"></script>
         <script src="js/jquery.fancybox.js"></script>
         <script src="js/main.js"></script>
-        <script>
-            var _gaq=[['_setAccount','UA-19883854-7'],['_trackPageview']];
-            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-            g.src='//www.google-analytics.com/ga.js';
-            s.parentNode.insertBefore(g,s)}(document,'script'));
-        </script>
     </body>
 </html>

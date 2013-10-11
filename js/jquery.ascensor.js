@@ -16,7 +16,7 @@ author: Léo Galley <contact@kirkas.ch>
     var pluginName = "ascensor", defaults = {
         ascensorName: "ascensor",
         // First, choose the ascensor name
-        ascensorFloorName: ['home','vision', 'portfolio', 'about', 'contact'],
+        ascensorFloorName: ['home','vision', 'scrapbook', 'us', 'contact'],
         // Choose name for each floor
         childType: "section",
         // Specify the child type if there are no 'div'

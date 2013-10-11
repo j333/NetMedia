@@ -25,7 +25,7 @@ function menuMobile(boleano){
             bandera = false;
         }else{
             $(".cbp-spmenu-left ul").css({ 'margin-top' : '0px'});
-            $(".cbp-spmenu #showMenu").css({ 'top' : '-30px'});
+            $(".cbp-spmenu #showMenu").css({ 'top' : '-200px'});
             $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '10px'});
             bandera = true;
          }
@@ -36,7 +36,7 @@ var windowsize;
 showMenu.onclick = function() {
     classie.toggle( menuLeft, 'cbp-spmenu-open' );
     
-    if (windowsize < 700){
+    if (windowsize < 640){
         menuMobile(true);
     }
 };
@@ -47,7 +47,7 @@ $(document).ready(function () {
 
 $(window).resize(function() {
     windowsize = $(window).width();
-    if (windowsize > 700){
+    if (windowsize > 640){
         $(".cbp-spmenu-left ul").css({ 'margin-top' : '0px'});
     }else{
         $(".cbp-spmenu-left ul").css({ 'margin-top' : '-90px'});
@@ -185,7 +185,7 @@ var options = {
     mapTypeControlOptions: {
         mapTypeIds: ['Styled']
     },
-    center: new google.maps.LatLng(25.069491,55.146337),
+    center: new google.maps.LatLng(25.069491,55.116337),
     zoom: 13,
     disableDefaultUI: true, 
     mapTypeId: 'Styled'
