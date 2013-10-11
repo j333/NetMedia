@@ -92,6 +92,11 @@
 	z-index: 8040;
 	background-image: url('../img/fancybox_sprite@2x.png');
 	background-color: #fafafa;
+    transition: .5s ease;
+}
+.fancybox-close:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 
 .fancybox-nav {

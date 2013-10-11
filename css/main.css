@@ -76,6 +76,12 @@ header h1{
 }
 h1{
     font-size: 75%;
+    position:absolute;
+    top:60px;
+    left:0;
+    width:91px;
+    text-align:center;
+    opacity:0;
 }
 h2{
     font-size: 100%;
@@ -123,6 +129,7 @@ strong{
 }
 section{
     overflow: auto;
+    position:relative;
 }
 .content{
     position: relative;
@@ -153,10 +160,11 @@ section{
     height: 90px;
     width: 90px;
     position: absolute;
-    left: -2px;
+    /*left: -2px;*/
+    left: 0;
     margin-top: 9px;
     background-repeat: no-repeat;
-	z-index:1;
+	z-index:30;
 }
 .vision .icon{
     background-image: url("../img/icons.png");
@@ -184,6 +192,7 @@ section{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    background-attachment:fixed;
 }
 .home .column1 {
     background-color: transparent;
@@ -207,6 +216,7 @@ section{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    background-attachment:fixed;
 }
 .portfolio strong{
     color: #FFC800;
@@ -350,6 +360,11 @@ section{
     right: 10px;
     margin-top: -35px;
     background-image: url('../img/fancybox_sprite@2x.png');
+    transition: .5s ease;
+}
+.profile-info-close:hover {
+    -webkit-transform: scale(1.2, 1.2);
+    transform: scale(1.2, 1.2);
 }
 .profile-icon{
     width: 45px;
@@ -573,6 +588,7 @@ nav li{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    background-attachment:fixed;
 }
 .portfolio .column2{
     position: relative;

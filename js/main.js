@@ -130,6 +130,10 @@ $("#maroun").click(function() {
     $('.about').animate({scrollTop:altoScroll}, 750);
 });
 
+$(".icon").hover(function(){
+    $(this).next('div').children().children("h1").animate({opacity : '1', top : '80px'},500);
+});
+
 //GOOGLE MAPS
 window.onload = function () {
     var styles = [
