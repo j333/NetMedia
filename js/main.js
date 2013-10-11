@@ -40,6 +40,13 @@ showMenu.onclick = function() {
         menuMobile(true);
     }
 };
+/*$(".cbp-spmenu ul li a").click(function(){
+    if (windowsize < 640){
+        classie.toggle( menuLeft, 'cbp-spmenu-vertical' );
+    }else{
+        classie.toggle( menuLeft, 'cbp-spmenu-open' );
+    }
+});*/
 
 $(document).ready(function () {
     windowsize = $(window).width();

@@ -923,6 +923,9 @@ nav li{
     .column1{
 		padding-left: 0;
 	}
+    .column1 h1{
+        display:none;
+    }
 	.direction{
         top:90px;
         bottom:0;

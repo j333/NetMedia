@@ -101,7 +101,6 @@ author: Léo Galley <contact@kirkas.ch>
         }
         /* Scroll function */
         function targetScroll(floor, time, hashChange) {
-
             if(floor === 1){
                 esconderH1(".vision");
             }
