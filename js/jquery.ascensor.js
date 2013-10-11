@@ -43,7 +43,7 @@ author: Léo Galley <contact@kirkas.ch>
     Plugin.prototype.init = function() {
 
         function esconderH1(seccion){
-            $(seccion+" h1").delay( 500 ).animate({opacity : '1', top : '80px'},500, 
+            $(seccion+" h1").delay( 1000 ).animate({opacity : '1', top : '80px'},500, 
                 function(){
                     $(this).delay( 2000 ).animate({opacity : '0', top : '60px'},500);
                 });
@@ -62,6 +62,20 @@ author: Léo Galley <contact@kirkas.ch>
                 //Scroll to the target floor
                 onLoad || targetScroll(floorActive, self.options.time, !0));
             }));
+
+            if(hash === "vision"){
+                esconderH1(".vision");
+            }
+            if(hash === "scrapbook"){
+                esconderH1(".portfolio");
+            }
+            if(hash === "us"){
+                esconderH1(".about");
+            }
+            if(hash === "contact"){
+                esconderH1(".contact");
+            }
+
         }
         /* Resize function */
         function resize() {

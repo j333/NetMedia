@@ -131,10 +131,14 @@ $("#maroun").click(function() {
 });
 
 $(".icon").hover(function(){
-    $(this).next('div').children().children("h1").animate({opacity : '1', top : '80px'},500);
+    //$(this).next('div').children().children("h1").animate({opacity : '1', top : '80px'},500);
+    $(this).next('div').children().children("h1").css("opacity","1");
+    $(this).next('div').children().children("h1").css("top","80px");
 });
 $(".icon").mouseout(function(){
-    $(this).next('div').children().children("h1").delay( 2000 ).animate({opacity : '0', top : '60px'},500);
+    //$(this).next('div').children().children("h1").delay( 2000 ).animate({opacity : '0', top : '60px'},500);
+    $(this).next('div').children().children("h1").css("opacity","0");
+    $(this).next('div').children().children("h1").css("top","60px");
 });
 
 //GOOGLE MAPS
