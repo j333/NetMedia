@@ -41,6 +41,14 @@ author: Léo Galley <contact@kirkas.ch>
         overflow: "hidden"
     };
     Plugin.prototype.init = function() {
+
+        function esconderH1(seccion){
+            $(seccion+" h1").delay( 500 ).animate({opacity : '1', top : '80px'},500, 
+                function(){
+                    $(this).delay( 2000 ).animate({opacity : '0', top : '60px'},500);
+                });
+        }
+
         /* Hash function */
         function hashChange(onLoad) {
             //if the url have an "hash"
@@ -79,6 +87,20 @@ author: Léo Galley <contact@kirkas.ch>
         }
         /* Scroll function */
         function targetScroll(floor, time, hashChange) {
+
+            if(floor === 1){
+                esconderH1(".vision");
+            }
+            if(floor === 2){
+                esconderH1(".portfolio");
+            }
+            if(floor === 3){
+                esconderH1(".about");
+            }
+            if(floor === 4){
+                esconderH1(".contact");
+            }
+
             hashChange && scrollStart(), //if direction is y
             "y" === self.options.direction && //stop animation and animate the "scrollTop" to the targeted floor
             $(node).stop().animate({
