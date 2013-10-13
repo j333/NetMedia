@@ -227,6 +227,8 @@ section{
 }
 .about .column2 strong {
     color: #B3B3B3;
+    font-size: 2em;
+    line-height: 1.4em;
 }
 .contact {
     background-color: #FF1C36;
@@ -382,6 +384,7 @@ section{
     height: 45px;
     background-image: url('../img/about-icons.png');
     float: left;
+    margin-right: .7em;
 }
 .profile-icon-ivan{
     background-position: 0 -45px;
@@ -394,14 +397,18 @@ section{
 }
 .tags{
     line-height: 1.5em;
+    color: #FF6E00;
+    margin-top: 4em;
 }
 .tags .informal{
     font-style: italic;
     font-size: 1.5em;
+    color: #B3B3B3;
 }
 .tags .formal{
     font-weight: 600;
     font-size: 2em;
+    color: #B3B3B3;
 }
 .about .column2{
     display: none;
@@ -731,9 +738,9 @@ nav li{
 }
 /**/
 #ri-grid a{
-    -webkit-filter: grayscale(100%);
+    /*-webkit-filter: grayscale(100%);
     -mox-filter: grayscale(100%);
-    filter: grayscale(100%);
+    filter: grayscale(100%);*/
 }
 #ri-grid a:hover{
     -webkit-filter: grayscale(0%);
