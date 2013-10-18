@@ -201,14 +201,15 @@ section{
 .home strong{
     font-size: 4em;
     margin-top: 30px;
-    display: block;
+    display: block;    
+    margin-left: -10px;
 }
 .home .logo{
     cursor: pointer;
     width: 150px;
     height: 38px;
     margin: 20px 0;
-    background:transparent url("../img/logo-big.png") no-repeat scroll;
+    background:transparent url("../img/logo.png") no-repeat scroll;
 }
 .vision strong{
     color: #22BD0D;
@@ -266,19 +267,19 @@ section{
     -webkit-animation-iteration-count: infinite;
 }
 @keyframes pulsate {
-     0% {opacity: 0;}
+     0% {opacity: .2;}
     50% {opacity: 1.0}
-    100% {opacity: 0}
+    100% {opacity: .2}
 }
 @-moz-keyframes pulsate {
-     0% {opacity: 0;}
+     0% {opacity: .2;}
     50% {opacity: 1.0}
-    100% {opacity: 0}
+    100% {opacity: .2}
 }
 @-webkit-keyframes pulsate {
-     0% {opacity: 0;}
+     0% {opacity: .2;}
     50% {opacity: 1.0}
-    100% {opacity: 0}
+    100% {opacity: .2}
 }
 
 /* Vision */
@@ -600,9 +601,9 @@ nav li{
 }
 .cbp-spmenu,
 .cbp-spmenu-push {
-    -webkit-transition: left 0.5s ease;
-    -moz-transition: left 0.5s ease;
-    transition: left 0.5s ease;
+    -webkit-transition: left 1s ease;
+    -moz-transition: left 1s ease;
+    transition: left 1s ease;
 }
 /*portfolio*/
 *,
@@ -621,6 +622,15 @@ nav li{
     -moz-background-size: cover;
     background-size: cover;
     background-attachment:fixed;
+}
+.portfolio .column1 {
+    background: -moz-linear-gradient(left,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 65%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(0,0,0,0.65)), color-stop(65%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 65%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 65%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(left,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 65%,rgba(0,0,0,0) 100%); /* IE10+ */
+    background: linear-gradient(to right,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 65%,rgba(0,0,0,0) 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=1 ); /* IE6-9 */
 }
 .portfolio .column2{
     position: relative;
@@ -665,6 +675,10 @@ nav li{
     position: relative;
     display: block;
     overflow: hidden;
+    -webkit-transition: all 0.5s ease-out;  /* Chrome 1-25, Safari 3.2+ */
+    -moz-transition: all 0.5s ease-out;  /* Firefox 4-15 */
+    -o-transition: all 0.5s ease-out;  /* Opera 10.50–12.00 */
+    transition: all 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
 .ri-grid ul li a{
     display: block;
@@ -880,6 +894,16 @@ nav li{
     .column2{
         padding-left: 5em;
     }
+    .portfolio .column1{
+        background: -moz-linear-gradient(top,  rgba(0,0,0,0.65) 0%, rgba(0,0,0,0.65) 72%, rgba(0,0,0,0) 100%); /* FF3.6+ */
+        background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.65)), color-stop(72%,rgba(0,0,0,0.65)), color-stop(100%,rgba(0,0,0,0))); /* Chrome,Safari4+ */
+        background: -webkit-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 72%,rgba(0,0,0,0) 100%); /* Chrome10+,Safari5.1+ */
+        background: -o-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 72%,rgba(0,0,0,0) 100%); /* Opera 11.10+ */
+        background: -ms-linear-gradient(top,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 72%,rgba(0,0,0,0) 100%); /* IE10+ */
+        background: linear-gradient(to bottom,  rgba(0,0,0,0.65) 0%,rgba(0,0,0,0.65) 72%,rgba(0,0,0,0) 100%); /* W3C */
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6000000', endColorstr='#00000000',GradientType=0 ); /* IE6-9 */
+    }
+
     .portfolio .column2{
         padding:0;
     }
@@ -1120,23 +1144,18 @@ nav li{
 /* ==========================================================================
    Images background responsive
    ========================================================================== */
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 640px) {
     .home{  
-        background-image: url("../img/home500.jpg");
-    }
-}
-@media only screen and (min-width: 501px) and (max-width: 1000px){
-    .home{  
-        background-image: url("../img/home1000.jpg");
+        background-image: url("../img/home640.jpg");
     }
     .portfolio{
-        background-image: url("../img/scrapbook1000.jpg");
+        background-image: url("../img/scrapbook640.jpg");
     }
-    .vision .column2{
-        background-image: url("../img/vision1000.jpg");
+    .vision .column2, .about .column2{
+        background-image: url("../img/vision640.jpg");
     }
 }
-@media only screen and (min-width: 1001px){
+@media only screen and (min-width: 641px){
     .home{  
         background-image: url("../img/home.jpg");
     }
