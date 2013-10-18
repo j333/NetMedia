@@ -210,7 +210,7 @@ var map = new google.maps.Map(div, options);
 var companyLogo = new google.maps.MarkerImage('img/map.png',
     new google.maps.Size(45,50),
     new google.maps.Point(0,0),
-    new google.maps.Point(50,50)
+    new google.maps.Point(22,50)
 );
 var companyPos = new google.maps.LatLng(25.069491,55.146337);
 var companyMarker = new google.maps.Marker({
