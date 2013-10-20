@@ -865,6 +865,9 @@ nav li{
     cursor: default;
     display: none!important;
 }
+.content.column2.about-efect {
+    display: block;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */

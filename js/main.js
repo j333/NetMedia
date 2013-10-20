@@ -104,7 +104,11 @@ $(".profile").click(function() {
 });
 
 $(".profile-info-close").click(function() {
-    $(".about .column2").hide("slow");
+    $("#ivan-info").hide("0");
+    $("#ally-info").hide("0");
+    $("#asier-info").hide("0");
+    $("#maroun-info").hide("0");
+    $("#Stage").show("slow");
     $(".profile").removeClass("profile-active");
     $('.about').animate({scrollTop:$(".about").offset().top}, 500);
     return false;
@@ -115,6 +119,7 @@ function mostrarUs(nombre){
     $("#ally-info").hide(0);
     $("#asier-info").hide(0);
     $("#maroun-info").hide(0);
+    $("#Stage").hide(0);
     $(nombre).show("slow");
     $('.about').animate({scrollTop:altoScroll}, 750);
 }
