@@ -25,7 +25,7 @@ function menuMobile(boleano){
             bandera = false;
         }else{
             $(".cbp-spmenu-left ul").css({ 'margin-top' : '0px'});
-            $(".cbp-spmenu #showMenu").css({ 'top' : '-200px'});
+            $(".cbp-spmenu #showMenu").css({ 'top' : '-30px'});
             $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '10px'});
             bandera = true;
          }
@@ -40,13 +40,6 @@ showMenu.onclick = function() {
         menuMobile(true);
     }
 };
-/*$(".cbp-spmenu ul li a").click(function(){
-    if (windowsize < 640){
-        classie.toggle( menuLeft, 'cbp-spmenu-vertical' );
-    }else{
-        classie.toggle( menuLeft, 'cbp-spmenu-open' );
-    }
-});*/
 
 $(document).ready(function () {
     windowsize = $(window).width();
@@ -104,14 +97,24 @@ $(".profile").click(function() {
 });
 
 $(".profile-info-close").click(function() {
-    $("#ivan-info").hide("0");
-    $("#ally-info").hide("0");
-    $("#asier-info").hide("0");
-    $("#maroun-info").hide("0");
-    $("#Stage").show("slow");
-    $(".profile").removeClass("profile-active");
-    $('.about').animate({scrollTop:$(".about").offset().top}, 500);
-    return false;
+    if (windowsize < 1200){
+        $("#ivan-info").hide(0);
+        $("#ally-info").hide(0);
+        $("#asier-info").hide(0);
+        $("#maroun-info").hide(0);
+        $(".profile").removeClass("profile-active");
+        $('.about').animate({scrollTop:$(".about").offset().top}, 500);
+        return false;
+    }else {
+        $("#ivan-info").hide(0);
+        $("#ally-info").hide(0);
+        $("#asier-info").hide(0);
+        $("#maroun-info").hide(0);
+        $("#Stage").show("slow");
+        $(".profile").removeClass("profile-active");
+        $('.about').animate({scrollTop:$(".about").offset().top}, 500);
+        return false;
+    }
 });
 
 function mostrarUs(nombre){

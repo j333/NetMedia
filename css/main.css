@@ -223,6 +223,9 @@ section{
 .portfolio strong{
     color: #FFC800;
 }
+.about{
+    background-color: #fafafa;
+}
 .about strong{
     color: #FF6E00;
 }
@@ -867,6 +870,8 @@ nav li{
 }
 .content.column2.about-efect {
     display: block;
+    background-attachment: fixed;
+    z-index: 0
 }
 /* ==========================================================================
    Media Queries
@@ -917,6 +922,9 @@ nav li{
         min-height: 100%;
         position: absolute;
         z-index: 999;
+    }
+    .content.column2.about-efect {
+        display: none;
     }
     .contact .column1{
         height:250px;
@@ -1022,7 +1030,7 @@ nav li{
         left:50%;
     }
     .cbp-spmenu #showMenu{
-		left:10px;        
+		right:20px;        
 		top:-110px;
         position:absolute;   
         transition: top .5s;
@@ -1160,7 +1168,7 @@ nav li{
     .portfolio{
         background-image: url("../img/scrapbook640.jpg");
     }
-    .vision .column2, .about .column2{
+    .vision .column2{
         background-image: url("../img/vision640.jpg");
     }
 }
@@ -1171,7 +1179,7 @@ nav li{
     .portfolio{
         background-image: url("../img/scrapbook.jpg");
     }
-    .vision .column2, .about .column2{
+    .vision .column2{
         background-image: url("../img/vision.jpg");
     }
 }
