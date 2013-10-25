@@ -224,7 +224,12 @@ section{
     color: #FFC800;
 }
 .about{
-    background-color: #ECECEC;
+    background-color: #fafafa;
+    background-image: url("../img/vision.jpg");
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    background-size: cover;
+    background-attachment: fixed;
 }
 .about strong{
     color: #FF6E00;
@@ -245,11 +250,10 @@ section{
 .contact strong{
     color: #FF1C36;
 }
-#qr-code{
-    width:200px;
-    height:200px;
-    margin-left:-25px;
-    margin-top:-10px;
+#qr-code {
+    width: 200px;
+    height: 200px;
+    margin-left: -5px;
 }
 /* Preloader */
 #preloader {
@@ -1016,6 +1020,7 @@ nav li{
     }
     nav li{
         width:20%;
+        height: 60px;
     }
     .cbp-spmenu li a{
         width:100%;
@@ -1031,6 +1036,7 @@ nav li{
 	}
     .cbp-spmenu-vertical {
         margin-top: 0;
+        height: 60px;
     }
     .cbp-spmenu-left ul{
         left: 0;
@@ -1086,12 +1092,14 @@ nav li{
     }
     .content strong{
         font-size:150%;
+        margin-top: 0;
     }
     /*.portfolio .content{
         width:90%;
     }*/
     .cbp-spmenu-left.cbp-spmenu-open {
     border-right: 0;
+    height: 60px;
     }
     .content .icon{
         display:none;
@@ -1100,7 +1108,7 @@ nav li{
         padding: 0;
     }
 	.text {
-		padding:4em 1em;
+		padding:5em 1em 4em;
 	}
     article .text {
         padding: 1em;

@@ -25,8 +25,8 @@ function menuMobile(boleano){
             bandera = false;
         }else{
             $(".cbp-spmenu-left ul").css({ 'margin-top' : '0px'});
-            $(".cbp-spmenu #showMenu").css({ 'top' : '-30px'});
-            $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '10px'});
+            $(".cbp-spmenu #showMenu").css({ 'top' : '-60px'});
+            $(".cbp-spmenu .ascensorLinkPrev").css({ 'top' : '-120px'});
             bandera = true;
          }
 }
