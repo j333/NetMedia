@@ -245,6 +245,12 @@ section{
 .contact strong{
     color: #FF1C36;
 }
+#qr-code{
+    width:200px;
+    height:200px;
+    margin-left:-25px;
+    margin-top:-10px;
+}
 /* Preloader */
 #preloader {
     position:absolute;
@@ -881,7 +887,6 @@ nav li{
 /* ==========================================================================
    Media Queries
    ========================================================================== */
- 
 @media screen and (max-height: 26.375em){
     .cbp-spmenu-vertical {
         font-size: 90%;
@@ -984,6 +989,9 @@ nav li{
     }
     .vision{
         background-position: 150% -150%;
+    }
+    #qr-code{
+        display:none;
     }
 }
 @media only screen and (max-width: 40em) {
