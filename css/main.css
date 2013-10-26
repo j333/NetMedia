@@ -888,6 +888,13 @@ nav li{
     background-attachment: fixed;
     z-index: 0
 }
+address {
+    font-style: normal;
+}
+#qr-code + p {
+    margin-top: 0;
+    font-size: .8em;
+}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
