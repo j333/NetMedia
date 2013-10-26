@@ -979,8 +979,8 @@ nav li{
     }
 
     .fancybox-inner .column1,.fancybox-inner .column2{
-        width:100% !important;
-        display:block; !important;
+        width:50% !important;
+        /*display:block !important;*/
     }
     .fancybox-inner .column2 div{
         position:static;
@@ -1157,6 +1157,15 @@ nav li{
     }
     .items-vision:hover .icon-vision{
         margin-left:0px;
+    }
+    .fancybox-inner .column1{
+        width:100% !important;
+    }
+    .fancybox-inner .column2{
+        width:100% !important;
+        display:block !important;
+        background-size:100%;
+        background-repeat:no-repeat;
     }
     .profile-info-close,.fancybox-close {
         top: 2px;

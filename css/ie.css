@@ -1,0 +1,55 @@
+.home{
+    background-image: url("../img/home.jpg");
+    background-position:60% 25%;
+}
+.vision .column2{
+    background-color:#fff;
+}
+.items-vision{
+    margin-left:80px;
+}
+.icon-vision,.items-vision:hover .icon-vision{
+    margin-left:0px;
+}
+.items-vision h2,.items-vision:hover h2,.items-vision p,.items-vision:hover p{
+    left:300px;
+}
+#ivan-info .text,
+#ally-info .text,
+#asier-info .text,
+#maroun-info .text{
+    margin-left:80px;
+}
+.profile-info-close{
+    top:25%;
+}
+.portfolio{
+    height:100%;
+    position:static;
+    overflow-y:scroll;
+}
+.portfolio{
+	background-image: url("../img/scrapbook.jpg");
+}
+.portfolio .column2{
+    width:100%;
+}
+.portfolio li{
+	display:block;
+    width:25% !important;
+    height:200px;
+    position:absolute;
+    list-style:none;
+    float:left;
+}
+.portfolio li a{
+	display:block;
+    width:100% !important;
+}
+.portfolio li img{
+	display:block;
+    width:100% !important;
+}
+/*#ri-grid{
+    position:static;
+}*/

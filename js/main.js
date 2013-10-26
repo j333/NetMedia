@@ -133,6 +133,7 @@ function mostrarUs(nombre){
     $("#Stage").hide(0);
     $(nombre).show("slow");
     $('.about').animate({scrollTop:altoScroll}, 750);
+    return false;
 }
 
 $("#ivan").click(function() {
