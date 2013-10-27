@@ -43,14 +43,10 @@ showMenu.onclick = function() {
 
 $(document).ready(function () {
     windowsize = $(window).width();
-
-    if(windowsize < 1200){
-        $("#ivan-info strong").after( "<div class='profile' id='ivan'><img src='img/ivan.jpg'></div>" );
-        $("#ally-info strong").after( "<div class='profile' id='ally'><img src='img/ally.jpg'></div>" );
-        $("#asier-info strong").after( "<div class='profile' id='asier'><img src='img/asier.jpg'></div>" );
-        $("#maroun-info strong").after( "<div class='profile' id='maroun'><img src='img/maroun.jpg'></div>" );
-    }
-
+    $("#ivan-info strong").after( "<div class='profile' id='ivan'><img src='img/ivan.jpg'></div>" );
+    $("#ally-info strong").after( "<div class='profile' id='ally'><img src='img/ally.jpg'></div>" );
+    $("#asier-info strong").after( "<div class='profile' id='asier'><img src='img/asier.jpg'></div>" );
+    $("#maroun-info strong").after( "<div class='profile' id='maroun'><img src='img/maroun.jpg'></div>" );
 });
 
 $(window).resize(function() {

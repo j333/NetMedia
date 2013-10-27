@@ -1023,6 +1023,11 @@ address {
         display:none;
     }
 }
+@media only screen and (min-width: 1200px) {
+    .about .column2 .profile{
+        display:none;
+    }
+}
 @media only screen and (max-width: 40em) {
     .column1{
 		padding-left: 0;
