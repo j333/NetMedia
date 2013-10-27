@@ -270,7 +270,7 @@ section{
     left:0;
     right:0;
     bottom:0;
-    background-color:#0071CF; /* change if the mask should have another color then white */
+    background-color:#fff; /* change if the mask should have another color then white */
     z-index:99; /* makes sure it stays on top */
 }
 #status {
@@ -279,33 +279,41 @@ section{
     position:absolute;
     left:50%; /* centers the loading animation horizontally one the screen */
     top:50%; /* centers the loading animation vertically one the screen */
-    background-image:url(../img/loader.png); /* path to your loading animation */
     background-size:100%;
     background-repeat:no-repeat;
     background-position:center;
     margin:-100px 0 0 -100px; /* is width and height divided by two */
     opacity: 1;
-    animation: pulsate 3s ease-out;
+    animation: pulsate 10s ease-out;
     animation-iteration-count: infinite;
-    -moz-animation: pulsate 3s ease-out;
+    -moz-animation: pulsate 10s ease-out;
     -moz-animation-iteration-count: infinite;
-    -webkit-animation: pulsate 3s ease-out;
+    -webkit-animation: pulsate 10s ease-out;
     -webkit-animation-iteration-count: infinite;
 }
 @keyframes pulsate {
-     0% {opacity: .2;}
-    50% {opacity: 1.0}
-    100% {opacity: .2}
+     0% {fill: #0071CF;}
+    20% {fill: #22BD0D}
+    40% {fill: #FFC800;}
+    60% {fill: #FF6E00;}
+    80% {fill: #FF1C36;}
+    100% {fill: #0071CF;}
 }
 @-moz-keyframes pulsate {
-     0% {opacity: .2;}
-    50% {opacity: 1.0}
-    100% {opacity: .2}
+     0% {fill: #0071CF;}
+    20% {fill: #22BD0D}
+    40% {fill: #FFC800;}
+    60% {fill: #FF6E00;}
+    80% {fill: #FF1C36;}
+    100% {fill: #0071CF;}
 }
 @-webkit-keyframes pulsate {
-     0% {opacity: .2;}
-    50% {opacity: 1.0}
-    100% {opacity: .2}
+     0% {fill: #0071CF;}
+    20% {fill: #22BD0D}
+    40% {fill: #FFC800;}
+    60% {fill: #FF6E00;}
+    80% {fill: #FF1C36;}
+    100% {fill: #0071CF;}
 }
 
 /* Vision */
