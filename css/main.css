@@ -238,11 +238,19 @@ section{
     color: #B3B3B3;
     font-size: 2em;
     line-height: 1.4em;
+    display: block;
+    margin-bottom: 1px;
 }
-.about .column2 .profile{
-    width:100%;
-    float:none;
-    margin-top:15px;
+.column2 .profile{
+    margin: 19px 15px 15px 0;
+    -webkit-filter: grayscale(0%);
+    -moz-filter: grayscale(0%);
+    filter: grayscale(0%);
+    cursor: default;
+}
+.column2 .profile:hover,.column2 .profile img{
+    width: auto;
+    height: 150px;
 }
 .contact {
     background-color: #FF1C36;
@@ -1195,8 +1203,11 @@ address {
     .profile, .profile:hover{
         width: 100%;
     }
-    .profile img{
+    .profile img,{
         margin: 0 auto;
+    }
+    .column2 .profile:hover{
+        width: 100%;
     }
 }
 /* ==========================================================================
