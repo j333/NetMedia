@@ -450,6 +450,7 @@ section{
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
+    background-color: transparent;
 }
 /* Contact Adriel */
 .contact{
@@ -945,6 +946,7 @@ address {
         min-height: 100%;
         position: absolute;
         z-index: 999;
+        background-color: #fff;
     }
     .content.column2.about-efect {
         display: none;
