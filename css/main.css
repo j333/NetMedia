@@ -223,9 +223,7 @@ section{
 .portfolio strong{
     color: #FFC800;
 }
-.about{
-    background-color: #fafafa;
-    background-image: url("../img/vision.jpg");
+.about {
     -webkit-background-size: cover;
     -moz-background-size: cover;
     background-size: cover;
@@ -233,6 +231,12 @@ section{
 }
 .about strong{
     color: #FF6E00;
+}
+.about .column1{
+    background-color: #fff;
+}
+.about .column2{
+    background-color: #fafafa;
 }
 .about .column2 strong {
     color: #B3B3B3;
@@ -276,7 +280,7 @@ section{
     left:0;
     right:0;
     bottom:0;
-    background-color:#fff; /* change if the mask should have another color then white */
+    background-color:#fafafa; /* change if the mask should have another color then white */
     z-index:99; /* makes sure it stays on top */
 }
 #status {
@@ -923,6 +927,11 @@ address {
         background:#fff;
     }
 }
+@media screen and (min-width : 75em){
+    .about{
+    background-image: url("../img/vision.jpg");
+    }
+}
 @media screen and (max-width : 75em){
     .content{
         height: auto;
@@ -952,9 +961,12 @@ address {
         min-height: 100%;
         position: absolute;
         z-index: 999;
-        background-color: #fff;
+        background-color: #fafafa;
     }
     .content.column2.about-efect {
+        display: none;
+    }
+    #Stage{
         display: none;
     }
     .contact .column1{
