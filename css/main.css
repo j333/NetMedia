@@ -327,13 +327,10 @@ section{
 .items-vision {
     float: left;
 	border-bottom: 1px solid #f1f1f1;
-	margin-top:1em;
     width:100%;
     position:relative;
 }
-.items-vision:nth-child(2){
-    padding-bottom:50px;
-}
+
 .items-vision h2,.items-vision p{
     position:absolute;
     left:0;
@@ -342,19 +339,16 @@ section{
     transition: 1s ease;
 }
 .items-vision h2{
-    top:0;
+    top:40px;
 }
 .items-vision p{
-    top:20px;
+    top:60px;
 }
 .items-vision:last-child {
 	border-bottom: 0px solid #f1f1f1;
 }
-.items-vision:first-child {
-	margin-top:none;
-}
 .icon-vision {
-    height: 218px;
+    height: 210px;
     width: 265px;
     margin: 0 auto;
     margin-left:85px;
