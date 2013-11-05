@@ -276,11 +276,8 @@ section{
     left:0;
     right:0;
     bottom:0;
-    background-color:#f6f6f6; /* change if the mask should have another color then white */
+    background-color:#fff; /* change if the mask should have another color then white */
     z-index:99; /* makes sure it stays on top */
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
 }
 #status {
     width:200px;
@@ -1252,9 +1249,6 @@ address {
     .vision .column2{
         background-image: url("../img/smileys640.jpg");
     }
-    #preloader{
-        background-image: url("../img/vision640.jpg");
-    }
 }
 @media only screen and (min-width: 641px){
     .home{  
@@ -1265,9 +1259,6 @@ address {
     }
     .vision .column2{
         background-image: url("../img/smileys.jpg");
-    }
-    #preloader{
-        background-image: url("../img/vision.jpg");
     }
 }
 
