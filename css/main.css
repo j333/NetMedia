@@ -241,6 +241,12 @@ section{
     display: block;
     margin-bottom: 1px;
 }
+.about a{
+    text-decoration: none;
+    color: #FF6E00;
+    font-size: small;
+    font-weight: 600;
+}
 .column2 .profile{
     margin: 19px 15px 15px 0;
     -webkit-filter: grayscale(0%);
