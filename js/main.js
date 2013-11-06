@@ -102,19 +102,13 @@ $(".profile").click(function() {
 
 $(".profile-info-close").click(function() {
     if (windowsize < 1200){
-        $("#ivan-info").hide(0);
-        $("#ally-info").hide(0);
-        $("#asier-info").hide(0);
-        $("#maroun-info").hide(0);
+        $("#ivan-info,#ally-info,#asier-info,#maroun-info").fadeOut(500);
         $(".profile").removeClass("profile-active");
         $('.about').animate({scrollTop:$(".about").offset().top}, 500);
         return false;
-    }else {
-        $("#ivan-info").hide(0);
-        $("#ally-info").hide(0);
-        $("#asier-info").hide(0);
-        $("#maroun-info").hide(0);
-        $("#Stage").show("slow");
+    }else{
+        $("#ivan-info,#ally-info,#asier-info,#maroun-info").fadeOut(500);
+        $("#Stage").delay(500).fadeIn();
         $(".profile").removeClass("profile-active");
         $('.about').animate({scrollTop:$(".about").offset().top}, 500);
         return false;
