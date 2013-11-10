@@ -224,9 +224,10 @@ section{
     color: #FFC800;
 }
 .about {
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    background-position: right;
     background-attachment: fixed;
 }
 .about strong{
@@ -251,6 +252,71 @@ section{
     font-size: small;
     font-weight: 600;
 }
+#Stage_circulo_1Copy {
+    opacity: .9;
+    filter:blur(1px);
+    -o-filter:blur(1px);
+    -ms-filter:blur(1px);
+    -moz-filter:blur(1px);
+    -webkit-filter:blur(1px);
+}
+#Stage_circulo_3 {
+    opacity: .6;
+    filter:blur(1px);
+    -o-filter:blur(1px);
+    -ms-filter:blur(1px);
+    -moz-filter:blur(1px);
+    -webkit-filter:blur(1px);
+}
+#Stage_circulo_4 {
+    opacity: .7;
+    filter:blur(1px);
+    -o-filter:blur(1px);
+    -ms-filter:blur(1px);
+    -moz-filter:blur(1px);
+    -webkit-filter:blur(1px);
+}
+#Stage_circulo_2{
+    opacity: .5;
+    filter:blur(1px);
+    -o-filter:blur(1px);
+    -ms-filter:blur(1px);
+    -moz-filter:blur(1px);
+    -webkit-filter:blur(1px);
+}
+#Stage_circulo_1Copy2{
+    opacity: .7;
+    filter:blur(1px);
+    -o-filter:blur(1px);
+    -ms-filter:blur(1px);
+    -moz-filter:blur(1px);
+    -webkit-filter:blur(1px);
+}
+#Stage_circulo_4Copy2 {
+    opacity: .5;
+    filter:blur(2px);
+    -o-filter:blur(2px);
+    -ms-filter:blur(2px);
+    -moz-filter:blur(2px);
+    -webkit-filter:blur(2px);
+}
+#Stage_circulo_4Copy{
+    opacity: .3;
+    filter:blur(2px);
+    -o-filter:blur(2px);
+    -ms-filter:blur(2px);
+    -moz-filter:blur(2px);
+    -webkit-filter:blur(2px);
+}
+#Stage_circulo_2Copy{
+    opacity: .1;
+    filter:blur(2px);
+    -o-filter:blur(2px);
+    -ms-filter:blur(2px);
+    -moz-filter:blur(2px);
+    -webkit-filter:blur(2px);
+}
+
 .column2 .profile{
     margin: 19px 15px 15px 0;
     -webkit-filter: grayscale(0%);
@@ -929,7 +995,7 @@ address {
 }
 @media screen and (min-width : 75em){
     .about{
-    background-image: url("../img/vision.jpg");
+    background-image: url("../img/about.jpg");
     }
 }
 @media screen and (max-width : 75em){
@@ -968,6 +1034,11 @@ address {
     }
     #Stage{
         display: none;
+          -o-filter:blur(4px);
+          -ms-filter:blur(4px);
+          -moz-filter:blur(4px);
+          -webkit-filter:blur(4px);
+          filter:blur(4px);
     }
     .contact .column1{
         height:250px;
