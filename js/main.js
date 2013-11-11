@@ -87,7 +87,7 @@ jQuery.each( cant_pics, function() {
 });
 
 $(document).ready(function() {
-    /*$(".fancybox").fancybox();*/
+    $(".fancybox").fancybox();
 	$('#ri-grid').gridrotator();
 });
 

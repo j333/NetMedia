@@ -149,7 +149,6 @@ section{
     width: -webkit-calc(100% - 40em);
     width: -moz-calc(100% - 40em);
     width: calc(100% - 40em);
-    background-color: #fafafa;
 }
 .text{
     max-width: 31em;
@@ -228,13 +227,9 @@ section{
     -moz-background-size: contain;
     background-size: contain;
     background-position: right;
-    background-attachment: fixed;
 }
 .about strong{
     color: #FF6E00;
-}
-.about .column1{
-    background-color: #fff;
 }
 .about .column2{
     background-color: #fafafa;
@@ -791,7 +786,7 @@ nav li{
     -o-transition: all 0.5s ease-out;  /* Opera 10.50–12.00 */
     transition: all 0.5s ease-out;  /* Chrome 26, Firefox 16+, IE 10+, Opera 12.10+ */
 }
-.ri-grid ul li a{
+.ri-grid ul li a {
     display: block;
     outline: none;
     position: absolute;
@@ -920,9 +915,12 @@ nav li{
     width: -webkit-calc(100% - 40em);
     width: -moz-calc(100% - 40em);
     width: calc(100% - 40em);
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
+    -webkit-background-size: contain;
+    -moz-background-size: contain;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #fff;
 }
 .fancybox-inner .column2 div{
     background-color:#999;
@@ -936,31 +934,31 @@ nav li{
     box-sizing:border-box;
 }
 #description1 .column2{
-    background-image: url(../img/1.jpg);
+    background-image: url(../img/01-big.jpg);
 }
 #description2 .column2{
-    background-image: url(../img/2.jpg);
+    background-image: url(../img/02-big.jpg);
 }
 #description3 .column2{
-    background-image: url(../img/3.jpg);
+    background-image: url(../img/03-big.jpg);
 }
 #description4 .column2{
-    background-image: url(../img/4.jpg);
+    background-image: url(../img/04-big.jpg);
 }
 #description5 .column2{
-    background-image: url(../img/5.jpg);
+    background-image: url(../img/05-big.jpg);
 }
 #description6 .column2{
-    background-image: url(../img/6.jpg);
+    background-image: url(../img/06-big.jpg);
 }
 #description7 .column2{
-    background-image: url(../img/7.jpg);
+    background-image: url(../img/07-big.jpg);
 }
 #description8 .column2{
-    background-image: url(../img/8.jpg);
+    background-image: url(../img/08-big.jpg);
 }
 #description9 .column2{
-    background-image: url(../img/9.jpg);
+    background-image: url(../img/09-big.jpg);
 }
 .none:hover:after {
     cursor: default;
@@ -991,11 +989,6 @@ address {
 @media screen and (max-height: 600px){
     .contact .content{
         background:#fff;
-    }
-}
-@media screen and (min-width : 75em){
-    .about{
-    background-image: url("../img/about.jpg");
     }
 }
 @media screen and (max-width : 75em){
@@ -1090,9 +1083,6 @@ address {
 @media only screen and (max-width: 1000px) {
     strong{
         font-size:200%;
-    }
-    .vision{
-        background-position: 150% -150%;
     }
 }
 @media only screen and (min-width: 1200px) {
@@ -1303,8 +1293,11 @@ address {
     .portfolio{
         background-image: url("../img/scrapbook640.jpg");
     }
-    .vision .column2{
+    .vision{
         background-image: url("../img/smileys640.jpg");
+    }
+    .about{
+        background-image: url("../img/about640.jpg");
     }
 }
 @media only screen and (min-width: 641px){
@@ -1314,8 +1307,11 @@ address {
     .portfolio{
         background-image: url("../img/scrapbook.jpg");
     }
-    .vision .column2{
+    .vision{
         background-image: url("../img/smileys.jpg");
+    }
+    .about{
+        background-image: url("../img/about.jpg");
     }
 }
 
