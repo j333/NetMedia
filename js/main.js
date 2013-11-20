@@ -231,12 +231,3 @@ var styledMapType = new google.maps.StyledMapType(styles, { name: 'Styled' });
 map.mapTypes.set('Styled', styledMapType);
 
 }
-
-
-
-
-
-
-
-
-
