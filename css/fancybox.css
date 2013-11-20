@@ -83,15 +83,14 @@
 
 .fancybox-close {
 	position: fixed;
-	top: 50%;
-	margin-top: -35px;
+	top: 0;
 	right: 0;
 	width: 70px;
 	height: 70px;
 	cursor: pointer;
 	z-index: 8040;
 	background-image: url('../img/fancybox_sprite@2x.png');
-    transition: .5s ease;
+	transition: .5s ease;
 }
 .fancybox-close:hover {
     -webkit-transform: scale(1.2, 1.2);
